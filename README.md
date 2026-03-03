@@ -1,20 +1,70 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Bitforge — Web Development & Design Agency
 
-# Run and deploy your AI Studio app
+Современный, анимированный и многоязычный сайт-портфолио для веб-студии **Bitforge**. Проект разработан с акцентом на премиальный темный дизайн с яркими акцентами (Lava Orange), плавными анимациями и удобным пользовательским интерфейсом.
 
-This contains everything you need to run your app locally.
+## 🌟 Особенности проекта
 
-View your app in AI Studio: https://ai.studio/apps/41726906-39f1-4e34-a235-424d357d7493
+- **Современный стек**: React 18, Vite, Tailwind CSS.
+- **Плавные анимации**: Интегрирован `framer-motion` для создания сложных переходов, появления элементов и интерактивных карточек.
+- **Мультиязычность (i18n)**: Поддержка русского (RU), английского (EN) и турецкого (TR) языков с помощью `react-i18next`.
+- **Динамические кейсы (Case Studies)**: Отдельные страницы для каждого проекта с подгрузкой локальных ассетов (логотипы, видео, скриншоты).
+- **Адаптивный дизайн**: Полная поддержка мобильных устройств, планшетов и десктопов.
+- **Кастомный UI**: Уникальные компоненты, такие как мега-меню, модальные окна, бегущие строки (marquee) и кастомные скроллбары.
 
-## Run Locally
+## 🛠 Технологии
 
-**Prerequisites:**  Node.js
+- **Frontend Framework**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Сборщик**: [Vite](https://vitejs.dev/)
+- **Стилизация**: [Tailwind CSS](https://tailwindcss.com/)
+- **Анимации**: [Framer Motion (motion/react)](https://motion.dev/)
+- **Иконки**: [Lucide React](https://lucide.dev/)
+- **Роутинг**: [React Router v6](https://reactrouter.com/)
+- **Локализация**: [i18next](https://www.i18next.com/)
 
+## 📂 Структура проекта
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```text
+├── public/
+│   ├── assets/
+│   │   ├── logo/          # Логотип проекта (logo.svg)
+│   │   └── cases/         # Медиафайлы для кейсов (видео, скриншоты, логотипы)
+├── src/
+│   ├── components/        # Переиспользуемые UI компоненты (Header, Footer, Hero и др.)
+│   ├── context/           # React Context (например, ModalContext)
+│   ├── locales/           # Файлы переводов (ru.json, en.json, tr.json)
+│   ├── pages/             # Страницы (Home, Portfolio, CaseStudy)
+│   ├── App.tsx            # Главный компонент приложения
+│   ├── index.css          # Глобальные стили и Tailwind директивы
+│   └── main.tsx           # Точка входа
+├── index.html             # Главный HTML файл
+└── package.json           # Зависимости и скрипты
+```
+
+## 🚀 Как запустить локально
+
+1. **Клонируйте репозиторий** (или скачайте исходный код):
+   ```bash
+   git clone <url-репозитория>
+   cd <название-папки>
+   ```
+
+2. **Установите зависимости**:
+   ```bash
+   npm install
+   ```
+
+3. **Запустите сервер для разработки**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Откройте в браузере**:
+   Перейдите по адресу `http://localhost:3000` (или порту, указанному в терминале).
+
+## 📦 Сборка для продакшена
+
+Для создания оптимизированной сборки выполните:
+```bash
+npm run build
+```
+Скомпилированные файлы будут находиться в папке `dist/`.

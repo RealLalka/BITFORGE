@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
-import { Image as ImageIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function CasesPreview() {
@@ -9,7 +8,7 @@ export default function CasesPreview() {
   const cases = [
     {
       id: 1,
-      assetFolder: 'financial-dashboard',
+      assetFolder: 'young-design',
       tag1: t('cases.case1.tag1'),
       tag2: t('cases.case1.tag2'),
       title: t('cases.case1.title').split(' ').map((w, i) => i === 1 ? <span key={i}><br/>{w}</span> : ` ${w}`),
@@ -19,7 +18,7 @@ export default function CasesPreview() {
     },
     {
       id: 2,
-      assetFolder: 'forex-binary',
+      assetFolder: 'salavpay',
       tag1: t('cases.case2.tag1'),
       tag2: t('cases.case2.tag2'),
       title: t('cases.case2.title').split(' ').map((w, i) => i === 1 ? <span key={i}><br/>{w}</span> : ` ${w}`),
@@ -39,13 +38,23 @@ export default function CasesPreview() {
     },
     {
       id: 4,
-      assetFolder: 'salavpay',
+      assetFolder: 'forex-binary',
       tag1: t('cases.case4.tag1'),
       tag2: t('cases.case4.tag2'),
       title: t('cases.case4.title').split(' ').map((w, i) => i === 1 ? <span key={i}><br/>{w}</span> : ` ${w}`),
       desc: t('cases.case4.desc'),
       bg: 'bg-[#0c0c0c]',
       align: 'end'
+    },
+    {
+      id: 5,
+      assetFolder: 'financial-dashboard',
+      tag1: t('cases.case5.tag1'),
+      tag2: t('cases.case5.tag2'),
+      title: t('cases.case5.title').split(' ').map((w, i) => i === 1 ? <span key={i}><br/>{w}</span> : ` ${w}`),
+      desc: t('cases.case5.desc'),
+      bg: 'bg-dark',
+      align: 'start'
     }
   ];
 
@@ -68,28 +77,22 @@ export default function CasesPreview() {
                 <img 
                   src={`/assets/cases/${c.assetFolder}/hero-screenshot.png`}
                   alt={c.title.toString()}
-                  className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-all duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover opacity-100 transition-all duration-700 group-hover:scale-105"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = `https://picsum.photos/seed/case${c.id}/1200/800`;
                   }}
                 />
-                <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
                 
                 {/* Logo Placeholder */}
-                <div className="absolute top-8 right-8 w-16 h-16 opacity-50 group-hover:opacity-100 transition-opacity duration-500 z-20">
+                <div className="absolute top-8 right-8 w-16 h-16 opacity-100 transition-opacity duration-500 z-20">
                   <img 
                     src={`/assets/cases/${c.assetFolder}/logo.svg`} 
                     alt="Logo" 
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain drop-shadow-lg"
                     onError={(e) => {
                       (e.target as HTMLImageElement).style.display = 'none';
                     }}
                   />
-                </div>
-
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-beige/20 font-mono pointer-events-none">
-                  <ImageIcon size={64} className="mb-4 opacity-50" />
-                  <span className="tracking-widest uppercase text-xs md:text-sm text-center font-bold">Визуальный Актив 0{c.id}</span>
                 </div>
               </div>
 

@@ -1,7 +1,7 @@
 {
   "nav": {
     "services": "SERVICES",
-    "portfolio": "PORTFOLIO",
+    "portfolio": "Solutions",
     "faq": "FAQ",
     "discuss": "DISCUSS PROJECT"
   },
@@ -15,40 +15,54 @@
   },
   "cases": {
     "case1": {
-      "tag1": "WEB",
-      "tag2": "ECOSYSTEM",
+      "tag1": "Web",
+      "tag2": "Ecosystem",
       "title": "Young Designs",
-      "desc": "Digital ecosystem for the All-Russian Designers Competition. Developed a comprehensive system: application site, moderation, social networks."
+      "desc": "Digital ecosystem for the All-Russian Designers Competition",
+      "challenge": "Design a fault-tolerant competition platform with a multi-level work moderation system.",
+      "solution": "Implemented a comprehensive digital product, including an application portal, an administration panel for experts, and social media integration.",
+      "result": "youngdesignspb.ru",
+      "overview": "The frontend design is executed in a Dark Mode SaaS style with an emphasis on Negative Space, allowing focus on content and key objects.\n\nVisual constants: Use of Glassmorphism in navigation elements and Floating UI for interactive components.\n\nGraphic dominants: In the center of the composition is a complex 3D abstraction with a chrome effect and anisotropic light filtering, symbolizing the synergy and dynamics of the creative process.\n\nTypography and usability: A strict hierarchy of headings is applied to ensure a high level of Accessibility (a11y). The call-to-action (CTA) button is implemented in a neon-purple gradient, creating the necessary visual weight on a black background.\n\nArchitecture: The interface is built on the principle of intuitiveness, minimizing the cognitive load on the user when navigating from familiarization to registration in the competition."
     },
     "case2": {
-      "tag1": "MOBILE",
-      "tag2": "LOGISTICS",
-      "title": "Corporate Application",
-      "desc": "Mobile application for logistics management. Created a unified mobile platform for all supply chain participants."
+      "tag1": "E-commerce",
+      "tag2": "Gaming",
+      "title": "SALAVPAY",
+      "desc": "Game and in-game currency store",
+      "challenge": "Develop an intuitive interface for instant replenishment of digital services and purchase of in-game assets.",
+      "solution": "Designed a high-conversion landing page with a focus on functional widgets and a simplified User Flow.",
+      "result": "Integrated transaction form for Steam and a catalog of popular titles (PUBG Mobile, Genshin Impact, etc.).",
+      "overview": "The interface is based on Dark Linear Style principles, providing comfortable visual perception in low-light conditions.\n\nUI components: Use of Glassmorphism for product cards and the central replenishment widget, creating a depth effect through soft background blur (backdrop-filter).\n\nVisual accents: Applied Subtle Gradient for the logo and key buttons, providing semantic highlighting of controls on a dark background.\n\nUsability and Accessibility (a11y):\nFloating UI: Input fields and interactive elements have clear boundaries and sufficient contrast for error-free interaction.\nNegative Space: Free space between sections eliminates visual noise, directing user attention to the data entry form.\nIntuitiveness: Navigation is implemented through hybrid search and a structured catalog, reducing the time to find the desired service to a minimum."
     },
     "case3": {
-      "tag1": "AI",
-      "tag2": "ANALYTICS",
-      "title": "AI Analytics",
-      "desc": "Machine learning system for demand forecasting. Trained a neural network on historical data taking seasonality into account."
+      "tag1": "Fintech",
+      "tag2": "Crypto",
+      "title": "PANDORA",
+      "desc": "Your payment partner for business and private transactions",
+      "challenge": "Create an interface for a fintech platform that broadcasts reliability and high speed of transaction processing.",
+      "solution": "Development of a landing page in Dark Mode SaaS style using dynamic graphic elements visualizing the data flow.",
+      "result": "Quick access to consultations and an entry point to the personal account for managing multi-currency transfers (USDT, EUR, RUB).",
+      "overview": "The visual strategy is built on deep dark blue shades, evoking associations with security and technology.\n\nUI components: Application of Floating UI for payment status widgets, creating an effect of multi-layering and modernity of the interface.\n\nVisual accents: Use of Glowing Borders and neon blue shades to highlight key words in the heading and active buttons (CTA).\n\nUsability and Accessibility (a11y):\nNegative Space: Large-scale indents around the main heading minimize cognitive load, allowing the user to instantly read the USP.\nIntuitiveness: Concise tags above the heading (\"Fast\", \"Profitable\", \"Safe\") serve as quick markers of the service's advantages.\nGraphic dominants: The right side of the screen is dedicated to an abstract visualization of transactions with a Glassmorphism effect, demonstrating real-time notifications of received funds."
     },
     "case4": {
-      "tag1": "FINTECH",
-      "tag2": "BACKEND",
-      "title": "Fintech Solution",
-      "desc": "Corporate financial management platform. Microservice architecture with full fault tolerance."
+      "tag1": "Trading",
+      "tag2": "Analytics",
+      "title": "FOREX ANALYTICS",
+      "desc": "Intelligent platform for monitoring currency markets",
+      "challenge": "Design an information panel (Dashboard) with high data density, maintaining visual cleanliness and speed of reading quotes.",
+      "solution": "Development of an interface based on Dark Linear Style with dynamic charts and a modular grid for customizing the trader's workspace.",
+      "result": "Real-time price streaming, predictive analytics based on ML, and an instant order execution system.",
+      "overview": "The visual stack is oriented towards the professional segment, where usability during prolonged work with a monitor is a priority.\n\nUI components: Application of Glassmorphism for overlays and modal windows, allowing the context of the main chart to be preserved when opening analysis tools.\n\nVisual accents: Use of Subtle Gradient in histograms and oscillators to differentiate bullish and bearish trends without excessive color aggression.\n\nUsability and Accessibility (a11y):\nNegative Space: Careful elaboration of micro-indents between quote tables (Order Book) to prevent errors when entering lot volume.\nFloating UI: Drawing tool widgets and timeframe selection \"float\" above the chart, providing quick access to functionality.\nIntuitiveness: Logical division of the screen into monitoring (left), analysis (center), and execution (right) zones, corresponding to the natural pattern of eye movement."
     },
     "case5": {
-      "tag1": "DESIGN",
-      "tag2": "BRANDING",
-      "title": "Startup Branding",
-      "desc": "Full visual identity for an IT startup. Developed a unique visual system with 3D elements."
-    },
-    "case6": {
-      "tag1": "IOT",
-      "tag2": "PLATFORM",
-      "title": "IoT Platform",
-      "desc": "Industrial equipment monitoring system. IoT platform with real-time dashboards and predictive analytics."
+      "tag1": "Dashboard",
+      "tag2": "Finance",
+      "title": "FINANCIAL DASHBOARD",
+      "desc": "Analytical dashboard for capital and liquidity management",
+      "challenge": "Aggregate disparate financial flows into a single interface with instant access to performance metrics (P&L, Cash Flow).",
+      "solution": "Development of a modular asset management system based on Dark Linear Style, providing real-time visualization of transactions.",
+      "result": "Interactive charts, a predictive cash gap forecasting system, and export of detailed reporting.",
+      "overview": "The design focused on minimizing cognitive load when analyzing large arrays of numerical data.\n\nUI components: Application of Glassmorphism for KPI cards, creating a hierarchy of layers and separating key indicators from secondary charts.\n\nVisual accents: Use of Subtle Gradient in line charts to indicate positive and negative dynamics, improving usability during quick screen scanning.\n\nUsability and Accessibility (a11y):\nNegative Space: Wide inter-module indents prevent visual merging of charts, ensuring clarity of perception (Minimalist style).\nFloating UI: The navigation menu and filters are implemented as floating panels, optimizing the useful screen area for data output.\nIntuitiveness: The use of standard \"top-down\" patterns (from general totals to detailed transactions) allows the user to seamlessly conduct a deep audit (Drill-down)."
     }
   },
   "cta": {
@@ -145,16 +159,21 @@
     "copyright": "© 2026 BITFORGE INC."
   },
   "portfolio": {
-    "title": "PORTFOLIO",
-    "subtitle": "Our best cases",
+    "title": "Solutions",
+    "subtitle": "Our successful projects",
     "view_case": "VIEW CASE"
   },
   "case": {
-    "back": "BACK TO PORTFOLIO",
-    "overview": "PROJECT OVERVIEW",
-    "stack": "TECHNOLOGIES",
-    "gallery": "GALLERY",
-    "video": "VIDEO DEMONSTRATION"
+    "back": "Back to solutions",
+    "overview": "Project Overview",
+    "stack": "Tech Stack",
+    "gallery": "Gallery",
+    "video": "Watch Demo",
+    "tech": "Tech Esthetics & UX Analysis",
+    "challenge": "Challenge:",
+    "solution": "Solution:",
+    "result": "Result:",
+    "notFound": "Case not found"
   },
   "ui": {
     "more": "Learn more",

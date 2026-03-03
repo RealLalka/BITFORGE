@@ -45,14 +45,7 @@ export default function Header() {
         }`}
       >
         <Link to="/" className="flex items-center gap-4 group cursor-pointer">
-          <div className="w-8 h-8 bg-lava flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-[0_0_15px_rgba(255,77,0,0.2)]">
-            <span className="font-black text-dark text-xl relative z-10">B</span>
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="font-black text-xl uppercase tracking-tighter text-beige">
-              Bitforge<span className="text-lava">_</span>
-            </span>
-          </div>
+          <img src="/assets/logo/logo.svg" alt="Bitforge" className="h-8 w-auto group-hover:scale-105 transition-transform" />
         </Link>
 
         <div className="flex items-center gap-10 lg:gap-14">
