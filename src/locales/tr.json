@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "services": "HİZMETLER",
+    "portfolio": "PORTFÖY",
+    "faq": "SSS",
+    "discuss": "PROJEYİ TARTIŞ"
+  },
+  "hero": {
+    "title": "BITFORGE",
+    "subtitle1": "DİJİTAL ",
+    "subtitle2": "EKOSİSTEMİ",
+    "subtitle3": "DÖVÜYORUZ",
+    "start": "PROJEYE BAŞLA",
+    "scroll": "KAYDIR"
+  },
+  "cases": {
+    "case1": {
+      "tag1": "WEB",
+      "tag2": "ECOSYSTEM",
+      "title": "Young Designs",
+      "desc": "Tüm Rusya Tasarımcılar Yarışması için dijital ekosistem. Kapsamlı bir sistem geliştirildi: başvuru sitesi, moderasyon, sosyal ağlar."
+    },
+    "case2": {
+      "tag1": "MOBILE",
+      "tag2": "LOGISTICS",
+      "title": "Kurumsal Uygulama",
+      "desc": "Lojistik yönetimi için mobil uygulama. Tüm tedarik zinciri katılımcıları için birleşik bir mobil platform oluşturuldu."
+    },
+    "case3": {
+      "tag1": "AI",
+      "tag2": "ANALYTICS",
+      "title": "Yapay Zeka Analitiği",
+      "desc": "Talep tahmini için makine öğrenimi sistemi. Mevsimsellik dikkate alınarak geçmiş veriler üzerinde bir sinir ağı eğitildi."
+    },
+    "case4": {
+      "tag1": "FINTECH",
+      "tag2": "BACKEND",
+      "title": "Fintech Çözümü",
+      "desc": "Kurumsal finansal yönetim platformu. Tam hata toleransına sahip mikro hizmet mimarisi."
+    },
+    "case5": {
+      "tag1": "DESIGN",
+      "tag2": "BRANDING",
+      "title": "Startup Markalaşması",
+      "desc": "Bir BT girişimi için tam görsel kimlik. 3D öğeler içeren benzersiz bir görsel sistem geliştirildi."
+    },
+    "case6": {
+      "tag1": "IOT",
+      "tag2": "PLATFORM",
+      "title": "IoT Platformu",
+      "desc": "Endüstriyel ekipman izleme sistemi. Gerçek zamanlı gösterge tabloları ve tahmine dayalı analitik içeren IoT platformu."
+    }
+  },
+  "cta": {
+    "title1": "DAHA FAZLASINI",
+    "title2": "GÖRMEYE HAZIR MISINIZ?",
+    "btn": "PORTFÖYE GİT"
+  },
+  "metrics": {
+    "m1": "BAŞARILI SÜRÜMLER",
+    "m2": "SLA & UPTIME",
+    "m3": "KOD SATIRLARI"
+  },
+  "clients": {
+    "title1": "MÜŞTERİLERİMİZ",
+    "title2": ""
+  },
+  "expertise": {
+    "title": "NEDEN BİZ?",
+    "items": [
+      {
+        "title": "İŞ ODAKLI",
+        "desc": "Sadece kod yazmıyoruz, iş sorunlarını çözüyoruz. Her kod satırı kar sağlamalı veya maliyetleri optimize etmelidir. Saf ROI kapsüllemesi."
+      },
+      {
+        "title": "ŞEFFAFLIK",
+        "desc": "'Kara kutu' paradigmasını reddediyoruz. Gerçek zamanlı çevik eserler aracılığıyla mutlak şeffaflık. Belirleyici sprintler."
+      },
+      {
+        "title": "HIZ",
+        "desc": "Hızlı Prototipleme. İş hipotezlerinin erken doğrulanmasını sağlayarak MVP'leri pazara rakiplerinden daha hızlı sunuyoruz."
+      },
+      {
+        "title": "KALİTE",
+        "desc": "Sıfır taahhütten itibaren yoğun yüklere dayanıklı mimari. Otomatik testler, sıkı inceleme ve sürekli CI/CD — bildirimsel bir standart."
+      }
+    ]
+  },
+  "pipeline": {
+    "title1": "ÇALIŞMA",
+    "title2": "SÜRECİ",
+    "desc": "Proje başlangıcı ve uygulamasının belirleyici süreci. Her aşamada şeffaflık.",
+    "steps": [
+      {
+        "title": "TALEP",
+        "desc": "Görevin kısa bir açıklamasını bırakırsınız. Teknik analistimiz, zaman kazanmanız için aramadan önce girdi verilerini inceler."
+      },
+      {
+        "title": "KEŞİF ÇAĞRISI",
+        "desc": "CTO ile 30 dakikalık brifing. İş gereksinimlerini netleştiriyor, mimari hipotezleri tartışıyor ve işin kapsamını (MVP veya Tam Ölçekli) belirliyoruz."
+      },
+      {
+        "title": "TAHMİN VE SÖZLEŞME",
+        "desc": "Saat cinsinden bir tahmin ve bütçe ile şeffaf bir ayrıştırma sağlıyoruz. Bir NDA, bir sözleşme imzalıyor ve özel bir ekip oluşturuyoruz."
+      },
+      {
+        "title": "ÜRETİM",
+        "desc": "2 haftalık sprintlerde yinelemeli geliştirme. Düzenli demo oturumları, depolara ve test ortamlarına 7/24 erişim."
+      }
+    ]
+  },
+  "team": {
+    "title": "EKİBİMİZ",
+    "subtitle": "25+ uzmandan oluşan ekip",
+    "members": [
+      { "name": "—", "role": "—" },
+      { "name": "—", "role": "—" },
+      { "name": "—", "role": "—" },
+      { "name": "—", "role": "—" }
+    ]
+  },
+  "footer": {
+    "title1": "BAŞLAMAYA",
+    "title2": "HAZIR MISINIZ?",
+    "btn": "PROJEYİ TARTIŞ",
+    "contacts": "// İLETİŞİM",
+    "social": "// SOSYAL MEDYA",
+    "faq": "SIKÇA SORULAN SORULAR (SSS)",
+    "company": "BITFORGE LLC",
+    "inn": "TIN: 9726103683",
+    "ogrn": "PSRN: 1257700388879",
+    "address": "117208, MOSKOVA, CHERTANOVSKAYA ST., 7A, OFİS 26P",
+    "copyright": "© 2026 BITFORGE INC."
+  },
+  "portfolio": {
+    "title": "PORTFÖY",
+    "subtitle": "En iyi örneklerimiz",
+    "view_case": "ÖRNEĞİ İNCELE"
+  },
+  "case": {
+    "back": "PORTFÖYE DÖN",
+    "overview": "PROJE GENEL BAKIŞI",
+    "stack": "TEKNOLOJİLER",
+    "gallery": "GALERİ",
+    "video": "VİDEO GÖSTERİMİ"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "services": "SERVICES",
+    "portfolio": "PORTFOLIO",
+    "faq": "FAQ",
+    "discuss": "DISCUSS PROJECT"
+  },
+  "hero": {
+    "title": "BITFORGE",
+    "subtitle1": "WE FORGE ",
+    "subtitle2": "DIGITAL",
+    "subtitle3": "ECOSYSTEM",
+    "start": "START PROJECT",
+    "scroll": "SCROLL"
+  },
+  "cases": {
+    "case1": {
+      "tag1": "WEB",
+      "tag2": "ECOSYSTEM",
+      "title": "Young Designs",
+      "desc": "Digital ecosystem for the All-Russian Designers Competition. Developed a comprehensive system: application site, moderation, social networks."
+    },
+    "case2": {
+      "tag1": "MOBILE",
+      "tag2": "LOGISTICS",
+      "title": "Corporate Application",
+      "desc": "Mobile application for logistics management. Created a unified mobile platform for all supply chain participants."
+    },
+    "case3": {
+      "tag1": "AI",
+      "tag2": "ANALYTICS",
+      "title": "AI Analytics",
+      "desc": "Machine learning system for demand forecasting. Trained a neural network on historical data taking seasonality into account."
+    },
+    "case4": {
+      "tag1": "FINTECH",
+      "tag2": "BACKEND",
+      "title": "Fintech Solution",
+      "desc": "Corporate financial management platform. Microservice architecture with full fault tolerance."
+    },
+    "case5": {
+      "tag1": "DESIGN",
+      "tag2": "BRANDING",
+      "title": "Startup Branding",
+      "desc": "Full visual identity for an IT startup. Developed a unique visual system with 3D elements."
+    },
+    "case6": {
+      "tag1": "IOT",
+      "tag2": "PLATFORM",
+      "title": "IoT Platform",
+      "desc": "Industrial equipment monitoring system. IoT platform with real-time dashboards and predictive analytics."
+    }
+  },
+  "cta": {
+    "title1": "READY TO SEE",
+    "title2": "MORE?",
+    "btn": "TO PORTFOLIO"
+  },
+  "metrics": {
+    "m1": "SUCCESSFUL RELEASES",
+    "m2": "SLA & UPTIME",
+    "m3": "LINES OF CODE"
+  },
+  "clients": {
+    "title1": "OUR ",
+    "title2": "CLIENTS"
+  },
+  "expertise": {
+    "title": "WHY US?",
+    "items": [
+      {
+        "title": "BUSINESS ORIENTED",
+        "desc": "We don't just write code, we solve business problems. Every line of code must generate profit or optimize costs. Pure ROI encapsulation."
+      },
+      {
+        "title": "TRANSPARENCY",
+        "desc": "Rejecting the 'black box' paradigm. Absolute transparency through real-time agile artifacts. Deterministic sprints."
+      },
+      {
+        "title": "SPEED",
+        "desc": "Rapid Prototyping. We bring MVPs to market faster than competitor benchmarks, ensuring early validation of business hypotheses."
+      },
+      {
+        "title": "QUALITY",
+        "desc": "Architecture resilient to peak loads from the zero commit. Autotests, strict review, and continuous CI/CD — a declarative standard."
+      }
+    ]
+  },
+  "pipeline": {
+    "title1": "WORK",
+    "title2": "PROCESS",
+    "desc": "Deterministic process of project start and implementation. Transparency at every stage.",
+    "steps": [
+      {
+        "title": "REQUEST",
+        "desc": "You leave a brief description of the task. Our technical analyst studies the input data before the call to save your time."
+      },
+      {
+        "title": "DISCOVERY CALL",
+        "desc": "30-minute briefing with the CTO. We clarify business requirements, discuss architectural hypotheses, and define the scope of work (MVP or Full Scale)."
+      },
+      {
+        "title": "ESTIMATION & CONTRACT",
+        "desc": "We provide a transparent decomposition with an estimate in hours and a budget. We sign an NDA, a contract, and form a dedicated team."
+      },
+      {
+        "title": "PRODUCTION",
+        "desc": "Iterative development in 2-week sprints. Regular demo sessions, access to repositories and test environments 24/7."
+      }
+    ]
+  },
+  "team": {
+    "title": "OUR TEAM",
+    "subtitle": "Team of 25+ specialists",
+    "members": [
+      { "name": "—", "role": "—" },
+      { "name": "—", "role": "—" },
+      { "name": "—", "role": "—" },
+      { "name": "—", "role": "—" }
+    ]
+  },
+  "footer": {
+    "title1": "READY TO",
+    "title2": "START?",
+    "btn": "DISCUSS PROJECT",
+    "contacts": "// CONTACTS",
+    "social": "// SOCIALS",
+    "faq": "FREQUENTLY ASKED QUESTIONS (FAQ)",
+    "company": "BITFORGE LLC",
+    "inn": "TIN: 9726103683",
+    "ogrn": "PSRN: 1257700388879",
+    "address": "117208, MOSCOW, CHERTANOVSKAYA ST., 7A, OFFICE 26P",
+    "copyright": "© 2026 BITFORGE INC."
+  },
+  "portfolio": {
+    "title": "PORTFOLIO",
+    "subtitle": "Our best cases",
+    "view_case": "VIEW CASE"
+  },
+  "case": {
+    "back": "BACK TO PORTFOLIO",
+    "overview": "PROJECT OVERVIEW",
+    "stack": "TECHNOLOGIES",
+    "gallery": "GALLERY",
+    "video": "VIDEO DEMONSTRATION"
+  }
+}
