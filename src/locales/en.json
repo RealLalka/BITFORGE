@@ -63,6 +63,16 @@
       "solution": "Development of a modular asset management system based on Dark Linear Style, providing real-time visualization of transactions.",
       "result": "Interactive charts, a predictive cash gap forecasting system, and export of detailed reporting.",
       "overview": "The design focused on minimizing cognitive load when analyzing large arrays of numerical data.\n\nUI components: Application of Glassmorphism for KPI cards, creating a hierarchy of layers and separating key indicators from secondary charts.\n\nVisual accents: Use of Subtle Gradient in line charts to indicate positive and negative dynamics, improving usability during quick screen scanning.\n\nUsability and Accessibility (a11y):\nNegative Space: Wide inter-module indents prevent visual merging of charts, ensuring clarity of perception (Minimalist style).\nFloating UI: The navigation menu and filters are implemented as floating panels, optimizing the useful screen area for data output.\nIntuitiveness: The use of standard \"top-down\" patterns (from general totals to detailed transactions) allows the user to seamlessly conduct a deep audit (Drill-down)."
+    },
+    "case6": {
+      "tag1": "Mobile",
+      "tag2": "Communication",
+      "title": "Wave Messenger",
+      "desc": "Secure corporate messaging platform with end-to-end encryption",
+      "challenge": "Develop a fault-tolerant architecture for real-time B2B communications, eliminating data compromise risks.",
+      "solution": "Implemented a WebSocket-based protocol with decentralized validation and AES-256 hardware encryption.",
+      "result": "High-performance client with delivery latency <50ms and 99.99% SLA.",
+      "overview": "UI designed following Dark Linear Style patterns. Focus on Negative Space and typography to reduce cognitive load. \n\nUsability: Implemented Floating UI for contextual message menus and navigation, providing intuitive access to functions.\n\nVisual accents: Subtle Gradient and Glowing Borders are used precisely to indicate delivery status and active dialogues."
     }
   },
   "cta": {

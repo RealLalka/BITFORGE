@@ -45,6 +45,14 @@ export default function Portfolio() {
       tag2: t('cases.case5.tag2'),
       title: t('cases.case5.title'),
       desc: t('cases.case5.desc')
+    },
+    {
+      id: 6,
+      assetFolder: 'wave-messenger',
+      tag1: t('cases.case6.tag1'),
+      tag2: t('cases.case6.tag2'),
+      title: t('cases.case6.title'),
+      desc: t('cases.case6.desc')
     }
   ];
 

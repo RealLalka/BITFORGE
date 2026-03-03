@@ -63,6 +63,16 @@
       "solution": "Development of a modular asset management system based on Dark Linear Style, providing real-time visualization of transactions.",
       "result": "Interactive charts, a predictive cash gap forecasting system, and export of detailed reporting.",
       "overview": "The design focused on minimizing cognitive load when analyzing large arrays of numerical data.\n\nUI components: Application of Glassmorphism for KPI cards, creating a hierarchy of layers and separating key indicators from secondary charts.\n\nVisual accents: Use of Subtle Gradient in line charts to indicate positive and negative dynamics, improving usability during quick screen scanning.\n\nUsability and Accessibility (a11y):\nNegative Space: Wide inter-module indents prevent visual merging of charts, ensuring clarity of perception (Minimalist style).\nFloating UI: The navigation menu and filters are implemented as floating panels, optimizing the useful screen area for data output.\nIntuitiveness: The use of standard \"top-down\" patterns (from general totals to detailed transactions) allows the user to seamlessly conduct a deep audit (Drill-down)."
+    },
+    "case6": {
+      "tag1": "Mobil",
+      "tag2": "İletişim",
+      "title": "Wave Messenger",
+      "desc": "Uçtan uca şifrelemeli güvenli kurumsal mesajlaşma platformu",
+      "challenge": "Veri ihlali risklerini ortadan kaldıran, B2B gerçek zamanlı iletişim için hataya dayanıklı bir mimari geliştirmek.",
+      "solution": "Merkezi olmayan doğrulama ve AES-256 donanım şifrelemeli WebSocket tabanlı protokol uygulandı.",
+      "result": "<50ms teslimat gecikmesi ve %99.99 SLA ile yüksek performanslı istemci.",
+      "overview": "Arayüz Dark Linear Style desenlerine göre tasarlandı. Bilişsel yükü azaltmak için Negative Space ve sıkı tipografiye odaklanıldı. \n\nKullanılabilirlik: Bağlamsal mesaj menüleri ve navigasyon için Floating UI uygulandı, işlevlere sezgisel erişim sağlandı.\n\nGörsel vurgular: Subtle Gradient ve Glowing Borders, teslimat durumunu ve aktif diyalogları belirtmek için hassas bir şekilde kullanılır."
     }
   },
   "cta": {

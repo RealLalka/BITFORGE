@@ -8,7 +8,8 @@ const assetFolderMap: Record<string, string> = {
   '2': 'salavpay',
   '3': 'pandora',
   '4': 'forex-binary',
-  '5': 'financial-dashboard'
+  '5': 'financial-dashboard',
+  '6': 'wave-messenger'
 };
 
 export default function CaseStudy() {
