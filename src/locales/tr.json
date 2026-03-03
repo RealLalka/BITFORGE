@@ -113,10 +113,22 @@
     "title": "EKİBİMİZ",
     "subtitle": "25+ uzmandan oluşan ekip",
     "members": [
-      { "name": "—", "role": "—" },
-      { "name": "—", "role": "—" },
-      { "name": "—", "role": "—" },
-      { "name": "—", "role": "—" }
+      {
+        "name": "—",
+        "role": "—"
+      },
+      {
+        "name": "—",
+        "role": "—"
+      },
+      {
+        "name": "—",
+        "role": "—"
+      },
+      {
+        "name": "—",
+        "role": "—"
+      }
     ]
   },
   "footer": {
@@ -143,5 +155,614 @@
     "stack": "TEKNOLOJİLER",
     "gallery": "GALERİ",
     "video": "VİDEO GÖSTERİMİ"
-  }
+  },
+  "ui": {
+    "more": "Daha fazla",
+    "back": "Geri",
+    "mainMenu": "Ana menü",
+    "categories": "Hizmet Kategorileri",
+    "steps": "Çalışma adımları",
+    "ready": "Projenizi tartışmaya hazır mısınız?",
+    "leaveReq": "Bir talep bırakın, uzmanlarımız ücretsiz danışmanlık için sizinle iletişime geçsin.",
+    "contactUs": "Bize ulaşın",
+    "notFound": "Hizmet bulunamadı",
+    "backHome": "Ana sayfaya dön"
+  },
+  "servicesData": [
+    {
+      "id": "dev",
+      "title": "Tasarım ve Geliştirme",
+      "desc": "Anahtar teslim BT ürünleri, mobil ve web geliştirme, AI, RPA.",
+      "items": [
+        {
+          "id": "turnkey-it",
+          "title": "Anahtar Teslim BT Ürünleri",
+          "description": "Fikirden lansmana ve desteğe kadar tam döngü yazılım geliştirme. Tüm teknik riskleri üstleniyor ve sonuçları garanti ediyoruz.",
+          "steps": [
+            {
+              "title": "Keşif Aşaması",
+              "desc": "Gereksinim toplama, rakip analizi ve konsept oluşturma."
+            },
+            {
+              "title": "Tasarım",
+              "desc": "Mimari geliştirme, UX/UI tasarımı ve teknik şartname yazımı."
+            },
+            {
+              "title": "Geliştirme",
+              "desc": "Yinelemeli ürün oluşturma (Frontend, Backend, Mobil)."
+            },
+            {
+              "title": "QA ve Test",
+              "desc": "Kaliteyi sağlamak için çok seviyeli test."
+            },
+            {
+              "title": "Sürüm ve Destek",
+              "desc": "Sunucularda dağıtım ve daha fazla bakım."
+            }
+          ]
+        },
+        {
+          "id": "mobile-web-dev",
+          "title": "Mobil ve Web İstemci Geliştirme",
+          "description": "Modern, hızlı ve duyarlı web uygulamaları ile yerel/çapraz platform mobil uygulamalar oluşturma.",
+          "steps": [
+            {
+              "title": "Gereksinim Analizi",
+              "desc": "Hedef platformları ve işlevselliği tanımlama."
+            },
+            {
+              "title": "UI/UX Tasarımı",
+              "desc": "Sezgisel arayüzler oluşturma."
+            },
+            {
+              "title": "Geliştirme",
+              "desc": "İstemci tarafı programlama (React, Vue, iOS, Android, Flutter)."
+            },
+            {
+              "title": "Entegrasyon",
+              "desc": "API'lere ve üçüncü taraf hizmetlere bağlanma."
+            },
+            {
+              "title": "Yayınlama",
+              "desc": "App Store, Google Play'de yerleştirme veya bir web sunucusuna dağıtım."
+            }
+          ]
+        },
+        {
+          "id": "front-back-eng",
+          "title": "Frontend ve Backend Mühendisliği",
+          "description": "Yüksek yüklü sistemler için sunucu ve istemci mantığının derin teknik gelişimi.",
+          "steps": [
+            {
+              "title": "Mimari",
+              "desc": "Teknoloji yığınını seçme ve veritabanlarını tasarlama."
+            },
+            {
+              "title": "Backend Geliştirme",
+              "desc": "Güvenilir bir API ve mikro hizmetler oluşturma."
+            },
+            {
+              "title": "Frontend Geliştirme",
+              "desc": "İstemci tarafında karmaşık iş mantığını uygulama."
+            },
+            {
+              "title": "Optimizasyon",
+              "desc": "Performans profilleme ve darboğazları ortadan kaldırma."
+            },
+            {
+              "title": "CI/CD",
+              "desc": "Sürekli entegrasyon ve teslimatı ayarlama."
+            }
+          ]
+        },
+        {
+          "id": "ai-integration",
+          "title": "Yapay Zeka Entegrasyonu",
+          "description": "Sinir ağlarının, makine öğreniminin ve LLM modellerinin şirket iş süreçlerine uygulanması.",
+          "steps": [
+            {
+              "title": "Süreç Denetimi",
+              "desc": "YZ kullanarak otomatikleştirilebilecek görevleri bulma."
+            },
+            {
+              "title": "Veri Hazırlama",
+              "desc": "Modelleri eğitmek için veri toplama ve etiketleme."
+            },
+            {
+              "title": "Geliştirme/Entegrasyon",
+              "desc": "Özel modelleri eğitme veya hazır API'leri (OpenAI, Gemini) entegre etme."
+            },
+            {
+              "title": "Test",
+              "desc": "Doğruluğu değerlendirme ve algoritmaları ayarlama."
+            },
+            {
+              "title": "Uygulama",
+              "desc": "YZ'yi mevcut BT altyapısına entegre etme."
+            }
+          ]
+        },
+        {
+          "id": "rpa-dev",
+          "title": "RPA Geliştirme",
+          "description": "Maliyetleri ve hataları azaltmak için rutin iş süreçlerinin Robotik Süreç Otomasyonu (RPA).",
+          "steps": [
+            {
+              "title": "Süreç Analizi",
+              "desc": "Robotlaştırma için rutin görevleri belirleme."
+            },
+            {
+              "title": "Robot Tasarımı",
+              "desc": "Yazılım robotu için eylem algoritması oluşturma."
+            },
+            {
+              "title": "Geliştirme",
+              "desc": "Komut dosyaları yazma ve RPA platformunu yapılandırma."
+            },
+            {
+              "title": "Pilot İşletim",
+              "desc": "Robotu gözetim altında gerçek verilerle test etme."
+            },
+            {
+              "title": "Ölçeklendirme",
+              "desc": "Robotu ticari işletime aktarma."
+            }
+          ]
+        },
+        {
+          "id": "bitrix-customization",
+          "title": "Bitrix Sistemlerinin Uygulanması ve Özelleştirilmesi",
+          "description": "Benzersiz iş ihtiyaçları için 1C-Bitrix tabanlı kurumsal portalları ve CRM'i yapılandırma.",
+          "steps": [
+            {
+              "title": "İş Analizi",
+              "desc": "Şirket yapısını ve satış süreçlerini inceleme."
+            },
+            {
+              "title": "Temel Kurulum",
+              "desc": "Portalı kurma, izinleri ve yapıyı yapılandırma."
+            },
+            {
+              "title": "Özelleştirme",
+              "desc": "Standart dışı modüller ve iş süreçleri geliştirme."
+            },
+            {
+              "title": "Entegrasyon",
+              "desc": "Bitrix24'ü 1C, telefon, web sitesi ve mesajlaşma programlarına bağlama."
+            },
+            {
+              "title": "Eğitim",
+              "desc": "Çalışanlar için eğitim seminerleri düzenleme."
+            }
+          ]
+        },
+        {
+          "id": "ui-ux-design",
+          "title": "Görsel Arayüz Tasarımı",
+          "description": "İş sorunlarını çözen ve kullanıcı dostu, düşünceli UX/UI tasarımı oluşturma.",
+          "steps": [
+            {
+              "title": "Araştırma",
+              "desc": "Hedef kitle ve rakiplerin analizi."
+            },
+            {
+              "title": "Prototipleme",
+              "desc": "Tel kafesler ve müşteri yolculuğu haritaları (CJM) oluşturma."
+            },
+            {
+              "title": "Görsel Tasarım",
+              "desc": "Kurumsal stilde (UI) maketler çizme."
+            },
+            {
+              "title": "Animasyon",
+              "desc": "Mikro etkileşimler ve animasyonlar tasarlama."
+            },
+            {
+              "title": "Geliştirmeye Devir",
+              "desc": "Programcılar için UI-kit ve spesifikasyonlar hazırlama."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "title": "Ekipler ve Destek",
+      "desc": "BT dış kaynak kullanımı, personel kiralama, SLA ile teknik destek.",
+      "items": [
+        {
+          "id": "it-outsourcing",
+          "title": "BT Dış Kaynak Kullanımı",
+          "description": "BT altyapısı geliştirme ve destek işlevlerinin özel ekibimize devri.",
+          "steps": [
+            {
+              "title": "Denetim",
+              "desc": "BT altyapısının mevcut durumunun değerlendirilmesi."
+            },
+            {
+              "title": "SLA Oluşturma",
+              "desc": "Hizmet seviyesi ve sorumluluk alanları üzerinde anlaşma."
+            },
+            {
+              "title": "Devir Teslim",
+              "desc": "Erişim ve belgelerin devri."
+            },
+            {
+              "title": "Bakım",
+              "desc": "Düzenli destek, izleme ve sistem geliştirme."
+            },
+            {
+              "title": "Raporlama",
+              "desc": "Yapılan işler hakkında şeffaf raporlar sunma."
+            }
+          ]
+        },
+        {
+          "id": "outstaffing",
+          "title": "Personel Kiralama",
+          "description": "Ekibinizi deneyimli geliştiricilerimiz, analistlerimiz veya test uzmanlarımızla güçlendirme.",
+          "steps": [
+            {
+              "title": "Talep",
+              "desc": "Gerekli yetkinliklerin ve derecelerin belirlenmesi."
+            },
+            {
+              "title": "Seçim",
+              "desc": "Uygun uzmanların özgeçmişlerinin sunulması."
+            },
+            {
+              "title": "Mülakat",
+              "desc": "Sizin tarafınızdaki adaylarla mülakatlar."
+            },
+            {
+              "title": "Entegrasyon",
+              "desc": "Uzmanın projeye katılımı ve ekibe adaptasyonu."
+            },
+            {
+              "title": "Destek",
+              "desc": "İşin kalite kontrolü ve İK desteği."
+            }
+          ]
+        },
+        {
+          "id": "tech-support-sla",
+          "title": "SLA ile Teknik Destek",
+          "description": "Garantili olay çözümü ve hizmetlerinizin 7/24 kesintisiz çalışması.",
+          "steps": [
+            {
+              "title": "İzleme Kurulumu",
+              "desc": "Uyarı sistemlerinin bağlanması (Zabbix, Prometheus)."
+            },
+            {
+              "title": "Yardım Masası Organizasyonu",
+              "desc": "Talepleri almak için kanalların ayarlanması."
+            },
+            {
+              "title": "Sınıflandırma",
+              "desc": "Olayları önceliğe göre dağıtma."
+            },
+            {
+              "title": "Çözüm",
+              "desc": "Arızaların kararlaştırılan süre içinde giderilmesi (SLA)."
+            },
+            {
+              "title": "Analiz",
+              "desc": "Kritik olayların post-mortem analizi."
+            }
+          ]
+        },
+        {
+          "id": "jira-service",
+          "title": "Jira Service Uygulaması ve Yönetimi",
+          "description": "Atlassian ürünlerine dayalı ITSM ve ESM süreçlerinin ayarlanması.",
+          "steps": [
+            {
+              "title": "Süreç Denetimi",
+              "desc": "Mevcut talep işleme süreçlerinin incelenmesi."
+            },
+            {
+              "title": "Tasarım",
+              "desc": "Bir iş akışı şeması geliştirme."
+            },
+            {
+              "title": "Jira Kurulumu",
+              "desc": "Bir portal, kuyruklar, SLA ve otomasyonlar oluşturma."
+            },
+            {
+              "title": "Entegrasyon",
+              "desc": "Confluence, Bitbucket ve dış sistemlerle bağlantı."
+            },
+            {
+              "title": "Lansman",
+              "desc": "Temsilcileri eğitme ve sistemi işletime alma."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "refactoring",
+      "title": "Yeniden Düzenleme ve İyileştirme",
+      "desc": "Eski sistem modernizasyonu, kriz karşıtı mühendislik, QA ve DevOps.",
+      "items": [
+        {
+          "id": "legacy-modernization",
+          "title": "Eski Sistem Modernizasyonu",
+          "description": "İş süreçlerini durdurmadan eski kod ve mimarinin güvenli bir şekilde güncellenmesi.",
+          "steps": [
+            {
+              "title": "Kod Denetimi",
+              "desc": "Teknik borç ve mimari sorunların analizi."
+            },
+            {
+              "title": "Strateji",
+              "desc": "Bir yaklaşım seçme: aşamalı yeniden düzenleme veya yeniden yazma."
+            },
+            {
+              "title": "Test Kapsamı",
+              "desc": "Mevcut davranışı düzeltmek için otomatik testler yazma."
+            },
+            {
+              "title": "Yeniden Düzenleme",
+              "desc": "Modüllerin aşamalı olarak güncellenmesi ve yeni teknolojilere geçiş."
+            },
+            {
+              "title": "Geçiş",
+              "desc": "Kesintisiz veri aktarımı ve trafik geçişi."
+            }
+          ]
+        },
+        {
+          "id": "crisis-engineering",
+          "title": "Kriz Karşıtı Mühendislik",
+          "description": "Başarısız projelerin acil kurtarılması, performans optimizasyonu ve kritik güvenlik açıklarının giderilmesi.",
+          "steps": [
+            {
+              "title": "Triyaj",
+              "desc": "Sorunun hızlı bir şekilde yerelleştirilmesi ve hizmet bozulmasının durdurulması."
+            },
+            {
+              "title": "Stabilizasyon",
+              "desc": "Çalışabilirliği geri yüklemek için geçici yamalar."
+            },
+            {
+              "title": "Derinlemesine Analiz",
+              "desc": "Kök nedeni bulma (Kök Neden Analizi)."
+            },
+            {
+              "title": "Sistemik Çözüm",
+              "desc": "Tekrarlamayı önlemek için mimari değişiklikler."
+            },
+            {
+              "title": "İzleme",
+              "desc": "Geri yüklenen sistem üzerinde artırılmış kontrol."
+            }
+          ]
+        },
+        {
+          "id": "qa-sdet",
+          "title": "Kalite Güvencesi (QA) ve SDET",
+          "description": "Test süreçleri oluşturma ve karmaşık otomasyon çerçeveleri geliştirme.",
+          "steps": [
+            {
+              "title": "QA Denetimi",
+              "desc": "Mevcut test süreçlerinin değerlendirilmesi."
+            },
+            {
+              "title": "Test Tasarımı",
+              "desc": "Test belgeleri ve stratejisi geliştirme."
+            },
+            {
+              "title": "Otomasyon",
+              "desc": "Python/Java/TS'de otomatik testler (UI, API, Yük) oluşturma."
+            },
+            {
+              "title": "CI/CD Entegrasyonu",
+              "desc": "Derleme sırasında düzenli test çalıştırmaları ayarlama."
+            },
+            {
+              "title": "Destek",
+              "desc": "Ürün değiştiğinde test tabanını güncelleme."
+            }
+          ]
+        },
+        {
+          "id": "devops",
+          "title": "DevOps Desteği",
+          "description": "Altyapı otomasyonu, CI/CD kurulumu ve hata toleransını sağlama.",
+          "steps": [
+            {
+              "title": "Altyapı Denetimi",
+              "desc": "Mevcut sunucuların ve dağıtım süreçlerinin analizi."
+            },
+            {
+              "title": "Kod Olarak Altyapı",
+              "desc": "Terraform/Ansible kullanarak altyapıyı tanımlama."
+            },
+            {
+              "title": "Konteynerleştirme",
+              "desc": "Uygulamaları Docker'da paketleme ve orkestrasyon (Kubernetes)."
+            },
+            {
+              "title": "CI/CD Boru Hattı",
+              "desc": "Otomatik kod derleme ve teslimatını ayarlama."
+            },
+            {
+              "title": "SecOps",
+              "desc": "Geliştirme sürecinde güvenlik uygulamalarını uygulama."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consulting",
+      "title": "Analitik, Denetim ve Danışmanlık",
+      "desc": "Keşif Aşaması, mimari tasarım, iş analizi, UX denetimi.",
+      "items": [
+        {
+          "id": "discovery-phase",
+          "title": "Keşif Aşaması",
+          "description": "Riskleri en aza indirmek ve geliştirme maliyetlerini doğru bir şekilde tahmin etmek için proje öncesi araştırma.",
+          "steps": [
+            {
+              "title": "Brifing",
+              "desc": "İlk gereksinimleri ve iş hedeflerini toplama."
+            },
+            {
+              "title": "Pazar Analizi",
+              "desc": "Rakipleri ve hedef kitleyi inceleme."
+            },
+            {
+              "title": "Tasarım",
+              "desc": "Bir konsept, mimari ve prototipler oluşturma."
+            },
+            {
+              "title": "Tahmin",
+              "desc": "Ayrıntılı bir tahmin ve iş planı oluşturma."
+            },
+            {
+              "title": "Eserler",
+              "desc": "Vizyon ve Kapsam, teknik şartname ve tıklanabilir bir prototipin teslimi."
+            }
+          ]
+        },
+        {
+          "id": "it-architecture",
+          "title": "BT Mimari Tasarımı",
+          "description": "Karmaşık sistemler için ölçeklenebilir ve hataya dayanıklı bir mimari geliştirme.",
+          "steps": [
+            {
+              "title": "İşlevsel Olmayan Gereksinimleri Toplama",
+              "desc": "Yükleri, SLA'yı, güvenlik gereksinimlerini belirleme."
+            },
+            {
+              "title": "Desen Seçimi",
+              "desc": "Mikro hizmetler, monolit, olay odaklı mimari."
+            },
+            {
+              "title": "Veritabanı Tasarımı",
+              "desc": "Bir VTYS seçme ve verileri normalleştirme."
+            },
+            {
+              "title": "Belgeleme",
+              "desc": "C4, UML diyagramları ve API açıklamaları oluşturma."
+            },
+            {
+              "title": "Mimari Savunma",
+              "desc": "Teknik çözümlerin sunumu ve gerekçelendirilmesi."
+            }
+          ]
+        },
+        {
+          "id": "business-system-analysis",
+          "title": "İş ve Sistem Analizi",
+          "description": "İş gereksinimlerini geliştiriciler için anlaşılır teknik özelliklere dönüştürme.",
+          "steps": [
+            {
+              "title": "Görüşme",
+              "desc": "İhtiyaçları belirlemek için paydaşlarla iletişim kurma."
+            },
+            {
+              "title": "Süreç Modelleme",
+              "desc": "AS-IS ve TO-BE süreçlerinin tanımı (BPMN, UML)."
+            },
+            {
+              "title": "Teknik Şartname Geliştirme",
+              "desc": "Kullanıcı Hikayeleri, Kullanım Durumları ve spesifikasyonlar yazma."
+            },
+            {
+              "title": "Entegrasyon Tasarımı",
+              "desc": "Veri değişim formatlarının tanımı (REST, SOAP, MQ)."
+            },
+            {
+              "title": "Destek",
+              "desc": "Sprintler sırasında geliştirme ekibine danışmanlık."
+            }
+          ]
+        },
+        {
+          "id": "it-consulting-qa",
+          "title": "BT Danışmanlığı ve QA Denetimi",
+          "description": "Şirket BT süreçlerinin uzman değerlendirmesi ve bir optimizasyon planının geliştirilmesi.",
+          "steps": [
+            {
+              "title": "Bilgi Toplama",
+              "desc": "Önemli çalışanlarla anketler ve görüşmeler."
+            },
+            {
+              "title": "Metrik Analizi",
+              "desc": "Pazara sunma süresi, Teslim Süresi, Hata Oranı incelenmesi."
+            },
+            {
+              "title": "Darboğazları Belirleme",
+              "desc": "Geliştirme ve test süreçlerindeki sorunları bulma."
+            },
+            {
+              "title": "Öneriler Geliştirme",
+              "desc": "Adım adım bir iyileştirme planı oluşturma."
+            },
+            {
+              "title": "Uygulama",
+              "desc": "Yeni uygulamaların ve araçların uygulanmasında yardım."
+            }
+          ]
+        },
+        {
+          "id": "ux-audit",
+          "title": "UX Denetimi",
+          "description": "Dönüşümü ve sadakati artırmak için kullanıcı arayüzlerinin uzman değerlendirmesi.",
+          "steps": [
+            {
+              "title": "Sezgisel Değerlendirme",
+              "desc": "Arayüzün kullanılabilirlik standartlarına uygunluğunun kontrol edilmesi."
+            },
+            {
+              "title": "Analitik Analizi",
+              "desc": "Kullanıcı davranışını inceleme (Yandex.Metrica, Google Analytics)."
+            },
+            {
+              "title": "Kullanıcı Testi",
+              "desc": "Gerçek kullanıcıları gözlemleme."
+            },
+            {
+              "title": "Rapor Oluşturma",
+              "desc": "Kritiklik değerlendirmesi ile bulunan sorunların açıklaması."
+            },
+            {
+              "title": "Çözüm Prototipleme",
+              "desc": "Hataları düzeltmek için maketler önerme."
+            }
+          ]
+        },
+        {
+          "id": "financial-methodologies",
+          "title": "Finansal Metodolojilerin Geliştirilmesi",
+          "description": "Fintech projeleri için algoritmalar ve matematiksel modeller oluşturma.",
+          "steps": [
+            {
+              "title": "Alan Analizi",
+              "desc": "Finansal ürünün özelliklerini inceleme."
+            },
+            {
+              "title": "Matematiksel Modelleme",
+              "desc": "Formüller ve hesaplama algoritmaları geliştirme."
+            },
+            {
+              "title": "Hipotez Testi",
+              "desc": "Tarihsel veriler üzerinde geriye dönük test."
+            },
+            {
+              "title": "Spesifikasyon",
+              "desc": "Geliştiriciler için metodolojinin açıklaması."
+            },
+            {
+              "title": "Doğrulama",
+              "desc": "Koddaki uygulamanın doğruluğunu kontrol etme."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

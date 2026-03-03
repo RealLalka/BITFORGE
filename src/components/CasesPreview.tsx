@@ -9,6 +9,7 @@ export default function CasesPreview() {
   const cases = [
     {
       id: 1,
+      assetFolder: 'financial-dashboard',
       tag1: t('cases.case1.tag1'),
       tag2: t('cases.case1.tag2'),
       title: t('cases.case1.title').split(' ').map((w, i) => i === 1 ? <span key={i}><br/>{w}</span> : ` ${w}`),
@@ -18,6 +19,7 @@ export default function CasesPreview() {
     },
     {
       id: 2,
+      assetFolder: 'forex-binary',
       tag1: t('cases.case2.tag1'),
       tag2: t('cases.case2.tag2'),
       title: t('cases.case2.title').split(' ').map((w, i) => i === 1 ? <span key={i}><br/>{w}</span> : ` ${w}`),
@@ -27,6 +29,7 @@ export default function CasesPreview() {
     },
     {
       id: 3,
+      assetFolder: 'pandora',
       tag1: t('cases.case3.tag1'),
       tag2: t('cases.case3.tag2'),
       title: t('cases.case3.title').split(' ').map((w, i) => i === 1 ? <span key={i}><br/>{w}</span> : ` ${w}`),
@@ -36,6 +39,7 @@ export default function CasesPreview() {
     },
     {
       id: 4,
+      assetFolder: 'salavpay',
       tag1: t('cases.case4.tag1'),
       tag2: t('cases.case4.tag2'),
       title: t('cases.case4.title').split(' ').map((w, i) => i === 1 ? <span key={i}><br/>{w}</span> : ` ${w}`),
@@ -62,12 +66,27 @@ export default function CasesPreview() {
               
               <div className={`absolute inset-0 ${c.align === 'start' ? 'md:left-[35%] lg:left-[40%] md:right-12 lg:right-20' : 'md:right-[35%] lg:right-[40%] md:left-12 lg:left-20'} md:top-12 md:bottom-12 bg-[#0a0a0a] border border-beige/10 overflow-hidden group-hover:border-lava/40 transition-colors duration-500 z-0 shadow-2xl rounded-sm`}>
                 <img 
-                  src={`https://picsum.photos/seed/case${c.id}/1200/800`}
+                  src={`/assets/cases/${c.assetFolder}/hero-screenshot.png`}
                   alt={c.title.toString()}
                   className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-all duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = `https://picsum.photos/seed/case${c.id}/1200/800`;
+                  }}
                 />
                 <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
+                
+                {/* Logo Placeholder */}
+                <div className="absolute top-8 right-8 w-16 h-16 opacity-50 group-hover:opacity-100 transition-opacity duration-500 z-20">
+                  <img 
+                    src={`/assets/cases/${c.assetFolder}/logo.svg`} 
+                    alt="Logo" 
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
+                </div>
+
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-beige/20 font-mono pointer-events-none">
                   <ImageIcon size={64} className="mb-4 opacity-50" />
                   <span className="tracking-widest uppercase text-xs md:text-sm text-center font-bold">Визуальный Актив 0{c.id}</span>

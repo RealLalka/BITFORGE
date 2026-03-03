@@ -10,6 +10,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import CaseStudy from './pages/CaseStudy';
+import ServicePage from './pages/ServicePage';
 import LoadingScreen from './components/LoadingScreen';
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
             <Route index element={<Home />} />
             <Route path="portfolio" element={<Portfolio />} />
             <Route path="case/:id" element={<CaseStudy />} />
+            <Route path="services/:id" element={<ServicePage />} />
           </Route>
         </Routes>
       )}

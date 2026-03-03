@@ -8,14 +8,14 @@ export default function Hero() {
 
   return (
     <header className="relative min-h-[100svh] pt-24 pb-12 flex flex-col items-center justify-center overflow-hidden mb-[10vh] md:mb-[15vh] px-4 w-full">
-      <div className="grid-bg" style={{ height: '150vh' }}></div>
+      <div className="grid-bg grid-bg-animated" style={{ height: '150vh' }}></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,77,0,0.06),transparent_70%)] pointer-events-none"></div>
 
       <div className="flex flex-col items-center z-10 relative w-full text-center my-auto">
         <motion.h1 
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          initial={{ opacity: 0, scale: 0.9, filter: 'blur(10px)' }}
+          animate={{ opacity: 1, scale: 1, filter: 'blur(0px)' }}
+          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
           className="text-[clamp(4rem,18vw,240px)] font-black leading-[0.75] tracking-tighter uppercase text-beige select-none pl-[0.05em]"
         >
           {t('hero.title')}
@@ -23,7 +23,7 @@ export default function Hero() {
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="space-y-4 pt-6 md:pt-8 pointer-events-none"
         >
           <h2 className="text-[clamp(1.2rem,4vw,3rem)] font-black uppercase tracking-tight leading-tight">
@@ -35,7 +35,7 @@ export default function Hero() {
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="pt-12 md:pt-16 flex flex-col items-center gap-10 w-full"
         >
           <button 

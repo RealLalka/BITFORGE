@@ -113,10 +113,22 @@
     "title": "OUR TEAM",
     "subtitle": "Team of 25+ specialists",
     "members": [
-      { "name": "—", "role": "—" },
-      { "name": "—", "role": "—" },
-      { "name": "—", "role": "—" },
-      { "name": "—", "role": "—" }
+      {
+        "name": "—",
+        "role": "—"
+      },
+      {
+        "name": "—",
+        "role": "—"
+      },
+      {
+        "name": "—",
+        "role": "—"
+      },
+      {
+        "name": "—",
+        "role": "—"
+      }
     ]
   },
   "footer": {
@@ -143,5 +155,614 @@
     "stack": "TECHNOLOGIES",
     "gallery": "GALLERY",
     "video": "VIDEO DEMONSTRATION"
-  }
+  },
+  "ui": {
+    "more": "Learn more",
+    "back": "Back",
+    "mainMenu": "Main menu",
+    "categories": "Service Categories",
+    "steps": "Work steps",
+    "ready": "Ready to discuss your project?",
+    "leaveReq": "Leave a request, and our specialists will contact you for a free consultation.",
+    "contactUs": "Contact us",
+    "notFound": "Service not found",
+    "backHome": "Back to home"
+  },
+  "servicesData": [
+    {
+      "id": "dev",
+      "title": "Design and Development",
+      "desc": "Turnkey IT products, mobile and web development, AI, RPA.",
+      "items": [
+        {
+          "id": "turnkey-it",
+          "title": "Turnkey IT Product Creation",
+          "description": "Full cycle software development from idea to launch and support. We take on all technical risks and guarantee results.",
+          "steps": [
+            {
+              "title": "Discovery Phase",
+              "desc": "Requirements gathering, competitor analysis, and concept formation."
+            },
+            {
+              "title": "Design",
+              "desc": "Architecture development, UX/UI design, and writing technical specifications."
+            },
+            {
+              "title": "Development",
+              "desc": "Iterative product creation (Frontend, Backend, Mobile)."
+            },
+            {
+              "title": "QA and Testing",
+              "desc": "Multi-level testing to ensure quality."
+            },
+            {
+              "title": "Release and Support",
+              "desc": "Deployment on servers and further maintenance."
+            }
+          ]
+        },
+        {
+          "id": "mobile-web-dev",
+          "title": "Mobile and Web Client Development",
+          "description": "Creating modern, fast, and responsive web applications and native/cross-platform mobile apps.",
+          "steps": [
+            {
+              "title": "Requirements Analysis",
+              "desc": "Defining target platforms and functionality."
+            },
+            {
+              "title": "UI/UX Design",
+              "desc": "Creating intuitive interfaces."
+            },
+            {
+              "title": "Development",
+              "desc": "Client-side programming (React, Vue, iOS, Android, Flutter)."
+            },
+            {
+              "title": "Integration",
+              "desc": "Connecting to APIs and third-party services."
+            },
+            {
+              "title": "Publication",
+              "desc": "Placement in the App Store, Google Play, or deployment to a web server."
+            }
+          ]
+        },
+        {
+          "id": "front-back-eng",
+          "title": "Frontend and Backend Engineering",
+          "description": "Deep technical development of server and client logic for high-load systems.",
+          "steps": [
+            {
+              "title": "Architecture",
+              "desc": "Choosing the technology stack and designing databases."
+            },
+            {
+              "title": "Backend Development",
+              "desc": "Creating a reliable API and microservices."
+            },
+            {
+              "title": "Frontend Development",
+              "desc": "Implementing complex business logic on the client side."
+            },
+            {
+              "title": "Optimization",
+              "desc": "Performance profiling and eliminating bottlenecks."
+            },
+            {
+              "title": "CI/CD",
+              "desc": "Setting up continuous integration and delivery."
+            }
+          ]
+        },
+        {
+          "id": "ai-integration",
+          "title": "Artificial Intelligence Integration",
+          "description": "Implementation of neural networks, machine learning, and LLM models into company business processes.",
+          "steps": [
+            {
+              "title": "Process Audit",
+              "desc": "Finding tasks that can be automated using AI."
+            },
+            {
+              "title": "Data Preparation",
+              "desc": "Collecting and labeling data for training models."
+            },
+            {
+              "title": "Development/Integration",
+              "desc": "Training custom models or integrating ready-made APIs (OpenAI, Gemini)."
+            },
+            {
+              "title": "Testing",
+              "desc": "Evaluating accuracy and adjusting algorithms."
+            },
+            {
+              "title": "Implementation",
+              "desc": "Integrating AI into the existing IT infrastructure."
+            }
+          ]
+        },
+        {
+          "id": "rpa-dev",
+          "title": "RPA Development",
+          "description": "Robotic Process Automation (RPA) of routine business processes to reduce costs and errors.",
+          "steps": [
+            {
+              "title": "Process Analysis",
+              "desc": "Identifying routine tasks for robotization."
+            },
+            {
+              "title": "Robot Design",
+              "desc": "Creating an algorithm of actions for the software robot."
+            },
+            {
+              "title": "Development",
+              "desc": "Writing scripts and configuring the RPA platform."
+            },
+            {
+              "title": "Pilot Operation",
+              "desc": "Testing the robot on real data under supervision."
+            },
+            {
+              "title": "Scaling",
+              "desc": "Transferring the robot to commercial operation."
+            }
+          ]
+        },
+        {
+          "id": "bitrix-customization",
+          "title": "Implementation and Customization of Bitrix Systems",
+          "description": "Configuring corporate portals and CRM based on 1C-Bitrix for unique business needs.",
+          "steps": [
+            {
+              "title": "Business Analysis",
+              "desc": "Studying the company structure and sales processes."
+            },
+            {
+              "title": "Basic Setup",
+              "desc": "Installing the portal, configuring permissions and structure."
+            },
+            {
+              "title": "Customization",
+              "desc": "Developing non-standard modules and business processes."
+            },
+            {
+              "title": "Integration",
+              "desc": "Connecting Bitrix24 with 1C, telephony, website, and messengers."
+            },
+            {
+              "title": "Training",
+              "desc": "Conducting training seminars for employees."
+            }
+          ]
+        },
+        {
+          "id": "ui-ux-design",
+          "title": "Visual Interface Design",
+          "description": "Creating thoughtful UX/UI design that solves business problems and is user-friendly.",
+          "steps": [
+            {
+              "title": "Research",
+              "desc": "Analysis of the target audience and competitors."
+            },
+            {
+              "title": "Prototyping",
+              "desc": "Creating wireframes and customer journey maps (CJM)."
+            },
+            {
+              "title": "Visual Design",
+              "desc": "Drawing mockups in corporate style (UI)."
+            },
+            {
+              "title": "Animation",
+              "desc": "Designing micro-interactions and animations."
+            },
+            {
+              "title": "Handover to Development",
+              "desc": "Preparing UI-kit and specifications for programmers."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "support",
+      "title": "Teams and Support",
+      "desc": "IT outsourcing, outstaffing, technical support with SLA.",
+      "items": [
+        {
+          "id": "it-outsourcing",
+          "title": "IT Outsourcing",
+          "description": "Transfer of IT infrastructure development and support functions to our dedicated team.",
+          "steps": [
+            {
+              "title": "Audit",
+              "desc": "Assessment of the current state of IT infrastructure."
+            },
+            {
+              "title": "SLA Formation",
+              "desc": "Agreement on service level and areas of responsibility."
+            },
+            {
+              "title": "Handover",
+              "desc": "Transfer of access and documentation."
+            },
+            {
+              "title": "Maintenance",
+              "desc": "Regular support, monitoring, and system development."
+            },
+            {
+              "title": "Reporting",
+              "desc": "Providing transparent reports on the work done."
+            }
+          ]
+        },
+        {
+          "id": "outstaffing",
+          "title": "Outstaffing",
+          "description": "Strengthening your team with our experienced developers, analysts, or testers.",
+          "steps": [
+            {
+              "title": "Request",
+              "desc": "Determining required competencies and grades."
+            },
+            {
+              "title": "Selection",
+              "desc": "Providing resumes of suitable specialists."
+            },
+            {
+              "title": "Interview",
+              "desc": "Interviews with candidates on your side."
+            },
+            {
+              "title": "Integration",
+              "desc": "Specialist onboarding and adaptation in the team."
+            },
+            {
+              "title": "Support",
+              "desc": "Quality control of work and HR support."
+            }
+          ]
+        },
+        {
+          "id": "tech-support-sla",
+          "title": "Technical Support with SLA",
+          "description": "Guaranteed incident resolution and uninterrupted operation of your services 24/7.",
+          "steps": [
+            {
+              "title": "Monitoring Setup",
+              "desc": "Connecting alerting systems (Zabbix, Prometheus)."
+            },
+            {
+              "title": "HelpDesk Organization",
+              "desc": "Setting up channels for receiving requests."
+            },
+            {
+              "title": "Classification",
+              "desc": "Distributing incidents by priority."
+            },
+            {
+              "title": "Resolution",
+              "desc": "Eliminating failures within the agreed time (SLA)."
+            },
+            {
+              "title": "Analysis",
+              "desc": "Post-mortem analysis of critical incidents."
+            }
+          ]
+        },
+        {
+          "id": "jira-service",
+          "title": "Implementation and Administration of Jira Service",
+          "description": "Setting up ITSM and ESM processes based on Atlassian products.",
+          "steps": [
+            {
+              "title": "Process Audit",
+              "desc": "Studying current request processing processes."
+            },
+            {
+              "title": "Design",
+              "desc": "Developing a workflow scheme."
+            },
+            {
+              "title": "Jira Setup",
+              "desc": "Creating a portal, queues, SLA, and automations."
+            },
+            {
+              "title": "Integration",
+              "desc": "Connection with Confluence, Bitbucket, and external systems."
+            },
+            {
+              "title": "Launch",
+              "desc": "Training agents and launching the system into operation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "refactoring",
+      "title": "Refactoring and Improvement",
+      "desc": "Legacy modernization, anti-crisis engineering, QA, and DevOps.",
+      "items": [
+        {
+          "id": "legacy-modernization",
+          "title": "Legacy System Modernization",
+          "description": "Safe updating of outdated code and architecture without stopping business processes.",
+          "steps": [
+            {
+              "title": "Code Audit",
+              "desc": "Analysis of technical debt and architectural problems."
+            },
+            {
+              "title": "Strategy",
+              "desc": "Choosing an approach: gradual refactoring or rewriting."
+            },
+            {
+              "title": "Test Coverage",
+              "desc": "Writing autotests to fix current behavior."
+            },
+            {
+              "title": "Refactoring",
+              "desc": "Phased updating of modules and transition to new technologies."
+            },
+            {
+              "title": "Migration",
+              "desc": "Seamless data transfer and traffic switching."
+            }
+          ]
+        },
+        {
+          "id": "crisis-engineering",
+          "title": "Anti-crisis Engineering",
+          "description": "Emergency rescue of failing projects, performance optimization, and elimination of critical vulnerabilities.",
+          "steps": [
+            {
+              "title": "Triage",
+              "desc": "Quick localization of the problem and stopping service degradation."
+            },
+            {
+              "title": "Stabilization",
+              "desc": "Temporary patches to restore operability."
+            },
+            {
+              "title": "In-depth Analysis",
+              "desc": "Finding the root cause (Root Cause Analysis)."
+            },
+            {
+              "title": "Systemic Solution",
+              "desc": "Architectural changes to prevent recurrence."
+            },
+            {
+              "title": "Monitoring",
+              "desc": "Enhanced control over the restored system."
+            }
+          ]
+        },
+        {
+          "id": "qa-sdet",
+          "title": "Quality Assurance (QA) and SDET",
+          "description": "Building testing processes and developing complex automation frameworks.",
+          "steps": [
+            {
+              "title": "QA Audit",
+              "desc": "Assessment of current testing processes."
+            },
+            {
+              "title": "Test Design",
+              "desc": "Development of test documentation and strategy."
+            },
+            {
+              "title": "Automation",
+              "desc": "Creating autotests (UI, API, Load) in Python/Java/TS."
+            },
+            {
+              "title": "CI/CD Integration",
+              "desc": "Setting up regular test runs during the build."
+            },
+            {
+              "title": "Support",
+              "desc": "Updating the test base when the product changes."
+            }
+          ]
+        },
+        {
+          "id": "devops",
+          "title": "DevOps Support",
+          "description": "Infrastructure automation, CI/CD setup, and ensuring fault tolerance.",
+          "steps": [
+            {
+              "title": "Infrastructure Audit",
+              "desc": "Analysis of current servers and deployment processes."
+            },
+            {
+              "title": "Infrastructure as Code",
+              "desc": "Describing infrastructure using Terraform/Ansible."
+            },
+            {
+              "title": "Containerization",
+              "desc": "Packaging applications in Docker and orchestration (Kubernetes)."
+            },
+            {
+              "title": "CI/CD Pipeline",
+              "desc": "Setting up automatic code build and delivery."
+            },
+            {
+              "title": "SecOps",
+              "desc": "Implementing security practices in the development process."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "consulting",
+      "title": "Analytics, Audit, and Consulting",
+      "desc": "Discovery Phase, architecture design, business analysis, UX audit.",
+      "items": [
+        {
+          "id": "discovery-phase",
+          "title": "Discovery Phase",
+          "description": "Pre-project research to minimize risks and accurately estimate development costs.",
+          "steps": [
+            {
+              "title": "Briefing",
+              "desc": "Collecting initial requirements and business goals."
+            },
+            {
+              "title": "Market Analysis",
+              "desc": "Studying competitors and target audience."
+            },
+            {
+              "title": "Design",
+              "desc": "Creating a concept, architecture, and prototypes."
+            },
+            {
+              "title": "Estimation",
+              "desc": "Forming a detailed estimate and work plan."
+            },
+            {
+              "title": "Artifacts",
+              "desc": "Handover of Vision & Scope, technical specifications, and a clickable prototype."
+            }
+          ]
+        },
+        {
+          "id": "it-architecture",
+          "title": "IT Architecture Design",
+          "description": "Developing a scalable and fault-tolerant architecture for complex systems.",
+          "steps": [
+            {
+              "title": "Gathering Non-functional Requirements",
+              "desc": "Determining loads, SLA, security requirements."
+            },
+            {
+              "title": "Choosing Patterns",
+              "desc": "Microservices, monolith, event-driven architecture."
+            },
+            {
+              "title": "DB Design",
+              "desc": "Choosing a DBMS and normalizing data."
+            },
+            {
+              "title": "Documentation",
+              "desc": "Creating C4, UML diagrams, and API descriptions."
+            },
+            {
+              "title": "Architecture Defense",
+              "desc": "Presentation and justification of technical solutions."
+            }
+          ]
+        },
+        {
+          "id": "business-system-analysis",
+          "title": "Business and Systems Analysis",
+          "description": "Translating business requirements into technical specifications understandable to developers.",
+          "steps": [
+            {
+              "title": "Interviewing",
+              "desc": "Communicating with stakeholders to identify needs."
+            },
+            {
+              "title": "Process Modeling",
+              "desc": "Description of AS-IS and TO-BE processes (BPMN, UML)."
+            },
+            {
+              "title": "Developing Tech Specs",
+              "desc": "Writing User Stories, Use Cases, and specifications."
+            },
+            {
+              "title": "Designing Integrations",
+              "desc": "Description of data exchange formats (REST, SOAP, MQ)."
+            },
+            {
+              "title": "Support",
+              "desc": "Consulting the development team during sprints."
+            }
+          ]
+        },
+        {
+          "id": "it-consulting-qa",
+          "title": "IT Consulting and QA Audit",
+          "description": "Expert assessment of company IT processes and development of an optimization plan.",
+          "steps": [
+            {
+              "title": "Information Gathering",
+              "desc": "Questionnaires and interviews with key employees."
+            },
+            {
+              "title": "Metrics Analysis",
+              "desc": "Studying Time-to-market, Lead Time, Defect Rate."
+            },
+            {
+              "title": "Identifying Bottlenecks",
+              "desc": "Finding problems in development and testing processes."
+            },
+            {
+              "title": "Developing Recommendations",
+              "desc": "Forming a step-by-step improvement plan."
+            },
+            {
+              "title": "Implementation",
+              "desc": "Assistance in implementing new practices and tools."
+            }
+          ]
+        },
+        {
+          "id": "ux-audit",
+          "title": "UX Audit",
+          "description": "Expert assessment of user interfaces to increase conversion and loyalty.",
+          "steps": [
+            {
+              "title": "Heuristic Evaluation",
+              "desc": "Checking the interface for compliance with usability standards."
+            },
+            {
+              "title": "Analytics Analysis",
+              "desc": "Studying user behavior (Yandex.Metrica, Google Analytics)."
+            },
+            {
+              "title": "User Testing",
+              "desc": "Observing real users."
+            },
+            {
+              "title": "Report Generation",
+              "desc": "Description of found problems with criticality assessment."
+            },
+            {
+              "title": "Prototyping Solutions",
+              "desc": "Proposing mockups to fix errors."
+            }
+          ]
+        },
+        {
+          "id": "financial-methodologies",
+          "title": "Development of Financial Methodologies",
+          "description": "Creating algorithms and mathematical models for fintech projects.",
+          "steps": [
+            {
+              "title": "Domain Analysis",
+              "desc": "Studying the specifics of the financial product."
+            },
+            {
+              "title": "Mathematical Modeling",
+              "desc": "Developing formulas and calculation algorithms."
+            },
+            {
+              "title": "Hypothesis Testing",
+              "desc": "Backtesting on historical data."
+            },
+            {
+              "title": "Specification",
+              "desc": "Description of the methodology for developers."
+            },
+            {
+              "title": "Validation",
+              "desc": "Checking the correctness of implementation in code."
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

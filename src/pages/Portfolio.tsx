@@ -9,6 +9,7 @@ export default function Portfolio() {
   const cases = [
     {
       id: 1,
+      assetFolder: 'financial-dashboard',
       tag1: t('cases.case1.tag1'),
       tag2: t('cases.case1.tag2'),
       title: t('cases.case1.title'),
@@ -16,6 +17,7 @@ export default function Portfolio() {
     },
     {
       id: 2,
+      assetFolder: 'forex-binary',
       tag1: t('cases.case2.tag1'),
       tag2: t('cases.case2.tag2'),
       title: t('cases.case2.title'),
@@ -23,6 +25,7 @@ export default function Portfolio() {
     },
     {
       id: 3,
+      assetFolder: 'pandora',
       tag1: t('cases.case3.tag1'),
       tag2: t('cases.case3.tag2'),
       title: t('cases.case3.title'),
@@ -30,6 +33,7 @@ export default function Portfolio() {
     },
     {
       id: 4,
+      assetFolder: 'salavpay',
       tag1: t('cases.case4.tag1'),
       tag2: t('cases.case4.tag2'),
       title: t('cases.case4.title'),
@@ -37,6 +41,7 @@ export default function Portfolio() {
     },
     {
       id: 5,
+      assetFolder: 'young-design',
       tag1: t('cases.case5.tag1'),
       tag2: t('cases.case5.tag2'),
       title: t('cases.case5.title'),
@@ -44,6 +49,7 @@ export default function Portfolio() {
     },
     {
       id: 6,
+      assetFolder: 'financial-dashboard',
       tag1: t('cases.case6.tag1'),
       tag2: t('cases.case6.tag2'),
       title: t('cases.case6.title'),
@@ -78,12 +84,27 @@ export default function Portfolio() {
             <Link to={`/case/${c.id}`} className="block group">
               <div className="aspect-[4/3] bg-[#0a0a0a] border border-beige/10 mb-6 relative overflow-hidden group-hover:border-lava/50 transition-colors duration-500">
                 <img 
-                  src={`https://picsum.photos/seed/case${c.id}/800/600`}
+                  src={`/assets/cases/${c.assetFolder}/hero-screenshot.png`}
                   alt={c.title}
                   className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-60 transition-all duration-700 group-hover:scale-105"
-                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = `https://picsum.photos/seed/case${c.id}/800/600`;
+                  }}
                 />
                 <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
+                
+                {/* Logo Placeholder */}
+                <div className="absolute top-6 right-6 w-12 h-12 opacity-50 group-hover:opacity-100 transition-opacity duration-500 z-20">
+                  <img 
+                    src={`/assets/cases/${c.assetFolder}/logo.svg`} 
+                    alt="Logo" 
+                    className="w-full h-full object-contain"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).style.display = 'none';
+                    }}
+                  />
+                </div>
+
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-beige/20 font-mono pointer-events-none">
                   <ImageIcon size={48} className="mb-4 opacity-50 group-hover:scale-110 transition-transform duration-500" />
                   <span className="tracking-widest uppercase text-xs font-bold">Визуальный Актив 0{c.id}</span>

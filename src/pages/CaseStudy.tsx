@@ -3,12 +3,22 @@ import { motion } from 'motion/react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Play } from 'lucide-react';
 
+const assetFolderMap: Record<string, string> = {
+  '1': 'financial-dashboard',
+  '2': 'forex-binary',
+  '3': 'pandora',
+  '4': 'salavpay',
+  '5': 'young-design',
+  '6': 'financial-dashboard' // fallback
+};
+
 export default function CaseStudy() {
   const { t } = useTranslation();
   const { id } = useParams();
   
   const caseId = id || '1';
   const caseData = t(`cases.case${caseId}`, { returnObjects: true }) as any;
+  const assetFolder = assetFolderMap[caseId] || 'financial-dashboard';
 
   if (!caseData || typeof caseData === 'string' || !caseData.title) {
     return (
@@ -37,9 +47,19 @@ export default function CaseStudy() {
             <span className="text-lava text-[10px] font-mono uppercase tracking-widest border border-lava/30 px-3 py-1.5">{caseData.tag1}</span>
             <span className="text-lava text-[10px] font-mono uppercase tracking-widest border border-lava/30 px-3 py-1.5">{caseData.tag2}</span>
           </div>
-          <h1 className="text-[clamp(2.5rem,6vw,80px)] font-black uppercase text-beige tracking-tighter leading-[1.1] mb-8">
-            {caseData.title}
-          </h1>
+          <div className="flex items-center gap-6 mb-8">
+            <img 
+              src={`/assets/cases/${assetFolder}/logo.svg`} 
+              alt="Logo" 
+              className="h-16 w-auto object-contain"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = 'none';
+              }}
+            />
+            <h1 className="text-[clamp(2.5rem,6vw,80px)] font-black uppercase text-beige tracking-tighter leading-[1.1]">
+              {caseData.title}
+            </h1>
+          </div>
           <p className="font-mono text-beige/70 text-sm md:text-lg leading-relaxed max-w-3xl">
             {caseData.desc}
           </p>
@@ -59,7 +79,17 @@ export default function CaseStudy() {
           loop 
           muted 
           playsInline
-          src="https://storage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          src={`/assets/cases/${assetFolder}/demo-video.mp4`}
+          onError={(e) => {
+            // Fallback to image if video fails
+            const target = e.target as HTMLVideoElement;
+            target.style.display = 'none';
+            const img = document.createElement('img');
+            img.src = `/assets/cases/${assetFolder}/hero-screenshot.png`;
+            img.className = "absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-100 transition-opacity duration-500";
+            img.onerror = () => { img.src = `https://picsum.photos/seed/case${caseId}/1920/1080`; };
+            target.parentNode?.insertBefore(img, target);
+          }}
         />
         <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
         <div className="absolute inset-0 flex flex-col items-center justify-center text-beige/20 pointer-events-none">
@@ -108,10 +138,12 @@ export default function CaseStudy() {
               {[1, 2, 3, 4].map((i) => (
                 <div key={i} className="aspect-[4/3] bg-[#0a0a0a] border border-beige/10 relative overflow-hidden hover:border-lava/50 transition-colors duration-300 group">
                   <img 
-                    src={`https://picsum.photos/seed/case${caseId}-${i}/800/600`}
+                    src={i === 1 ? `/assets/cases/${assetFolder}/hero-screenshot.png` : `https://picsum.photos/seed/case${caseId}-${i}/800/600`}
                     alt={`Gallery ${i}`}
                     className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-105"
-                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = `https://picsum.photos/seed/case${caseId}-${i}/800/600`;
+                    }}
                   />
                   <div className="absolute inset-0 grid-bg opacity-20 pointer-events-none"></div>
                 </div>
