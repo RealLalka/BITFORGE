@@ -85,7 +85,7 @@ export default function Portfolio() {
                 <img 
                   src={`/assets/cases/${c.assetFolder}/hero-screenshot.png`}
                   alt={c.title}
-                  className="absolute inset-0 w-full h-full object-cover opacity-100 transition-all duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover opacity-100 transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = `https://picsum.photos/seed/case${c.id}/800/600`;
                   }}

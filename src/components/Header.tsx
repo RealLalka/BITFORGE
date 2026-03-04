@@ -45,7 +45,7 @@ export default function Header() {
         }`}
       >
         <Link to="/" className="flex items-center gap-4 group cursor-pointer">
-          <img src="/assets/logo/logo.svg" alt="Bitforge" className="h-8 w-auto group-hover:scale-105 transition-transform" />
+          <img src="/assets/logo/logo.svg" alt="Bitforge" className="h-8 w-auto transition-transform duration-300 group-hover:scale-105" />
         </Link>
 
         <div className="flex items-center gap-10 lg:gap-14">
@@ -54,7 +54,7 @@ export default function Header() {
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
-            <button className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-beige/70 group-hover:text-lava transition-colors flex items-center gap-1">
+            <button className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-beige/70 transition-colors duration-300 group-hover:text-lava flex items-center gap-1">
               {t('nav.services')} <ChevronDown size={14} className={`transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
             </button>
             <div className={`fixed top-20 left-0 right-0 transition-all duration-300 flex justify-center ${servicesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'}`}>
@@ -96,12 +96,12 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <Link to="/portfolio" className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-beige/70 hover:text-lava transition-colors h-20 flex items-center">
+          <Link to="/portfolio" className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-beige/70 transition-colors duration-300 hover:text-lava h-20 flex items-center">
             {t('nav.portfolio')}
           </Link>
           <button 
             onClick={() => openModal('faq')}
-            className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-beige/70 hover:text-lava transition-colors h-20 flex items-center"
+            className="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-beige/70 transition-colors duration-300 hover:text-lava h-20 flex items-center"
           >
             {t('nav.faq')}
           </button>
@@ -113,14 +113,13 @@ export default function Header() {
             onMouseEnter={() => setLangOpen(true)}
             onMouseLeave={() => setLangOpen(false)}
           >
-            <button className="px-2 py-1 text-beige/40 font-mono text-[10px] hover:text-lava transition-colors cursor-pointer select-none flex items-center gap-1 font-bold">
-              [{i18n.language}] <ChevronDown size={14} className={`transition-transform duration-300 ${langOpen ? 'rotate-180' : ''}`} />
+            <button className="px-2 py-1 text-beige/60 font-mono text-[10px] transition-colors duration-300 hover:text-lava cursor-pointer select-none flex items-center gap-1 font-bold">
+              [{i18n.language}] <ChevronDown size={14} className={`transition-transform duration-500 ${langOpen ? 'rotate-180' : ''}`} />
             </button>
             <div className={`absolute top-full left-1/2 -translate-x-1/2 transition-all duration-300 min-w-[80px] ${langOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-2 pointer-events-none'}`}>
-              <div className="bg-dark border border-beige/10 flex flex-col shadow-[0_10px_40px_rgba(15,15,15,0.9)] relative mt-2">
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-lava"></div>
+              <div className="bg-dark border border-beige/20 flex flex-col shadow-[0_10px_40px_rgba(15,15,15,0.9)] relative mt-2 overflow-hidden">
                 {['RU', 'EN', 'TR'].map((lang) => (
-                  <button key={lang} onClick={() => changeLang(lang)} className="font-mono text-[10px] font-bold uppercase tracking-widest text-beige/70 hover:text-lava hover:bg-beige/[0.02] px-4 py-3 border-b border-beige/5 transition-colors">
+                  <button key={lang} onClick={() => changeLang(lang)} className="font-mono text-[10px] font-bold uppercase tracking-widest text-beige/80 transition-colors duration-300 hover:text-lava hover:bg-beige/[0.05] px-4 py-3 border-b border-beige/10 last:border-b-0">
                     {lang}
                   </button>
                 ))}
@@ -146,10 +145,12 @@ export default function Header() {
               setTimeout(() => setMobileMenuLevel('main'), 300);
             }
           }}
-          className="w-12 h-12 bg-lava flex items-center justify-center shadow-[0_4px_20px_rgba(255,77,0,0.4)] active:scale-90 transition-all duration-300 pointer-events-auto border border-beige/20 rounded-full" 
+          className="w-12 h-12 bg-lava flex items-center justify-center shadow-[0_4px_20px_rgba(255,77,0,0.4)] transition-all duration-300 hover:bg-[#e64500] active:scale-95 pointer-events-auto border border-beige/20 group" 
           aria-label="Меню"
         >
-          {mobileMenuOpen ? <X size={24} className="text-dark" /> : <Menu size={24} className="text-dark" />}
+          <div className={`transition-transform duration-300 ${mobileMenuOpen ? 'rotate-90' : ''}`}>
+            {mobileMenuOpen ? <X size={24} className="text-dark" /> : <Menu size={24} className="text-dark" />}
+          </div>
         </button>
       </div>
 
@@ -157,21 +158,21 @@ export default function Header() {
       <div className={`md:hidden fixed inset-0 bg-dark/98 backdrop-blur-2xl z-50 transition-all duration-500 flex flex-col pt-24 px-6 overflow-hidden ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         
         {/* Main Menu */}
-        <div className={`absolute inset-0 pt-24 px-6 flex flex-col transition-transform duration-500 ${mobileMenuLevel !== 'main' ? '-translate-x-full' : 'translate-x-0'}`}>
-          <div className="flex flex-col gap-8 items-start">
-            <Link to="/" onClick={() => setMobileMenuOpen(false)} className="font-black text-3xl uppercase tracking-tighter text-beige">
+        <div className={`absolute inset-0 px-6 flex flex-col justify-center items-center transition-transform duration-500 ${mobileMenuLevel !== 'main' ? '-translate-x-full' : 'translate-x-0'}`}>
+          <div className="flex flex-col gap-8 items-center w-full max-w-sm">
+            <Link to="/" onClick={() => setMobileMenuOpen(false)} className="font-black text-3xl uppercase tracking-tighter text-beige transition-colors duration-300 hover:text-lava">
               Bitforge
             </Link>
-            <button onClick={() => setMobileMenuLevel('categories')} className="font-black text-3xl uppercase tracking-tighter text-beige flex items-center gap-2">
-              {t('nav.services')} <ArrowRight size={24} className="text-lava" />
+            <button onClick={() => setMobileMenuLevel('categories')} className="font-black text-3xl uppercase tracking-tighter text-beige transition-colors duration-300 hover:text-lava flex items-center gap-2 group">
+              {t('nav.services')} <ArrowRight size={24} className="text-lava transition-transform duration-300 group-hover:translate-x-1" />
             </button>
-            <Link to="/portfolio" onClick={() => setMobileMenuOpen(false)} className="font-black text-3xl uppercase tracking-tighter text-beige">
+            <Link to="/portfolio" onClick={() => setMobileMenuOpen(false)} className="font-black text-3xl uppercase tracking-tighter text-beige transition-colors duration-300 hover:text-lava">
               {t('nav.portfolio')}
             </Link>
-            <button onClick={() => { setMobileMenuOpen(false); openModal('faq'); }} className="font-black text-3xl uppercase tracking-tighter text-beige">
+            <button onClick={() => { setMobileMenuOpen(false); openModal('faq'); }} className="font-black text-3xl uppercase tracking-tighter text-beige transition-colors duration-300 hover:text-lava">
               {t('nav.faq')}
             </button>
-            <button onClick={() => { setMobileMenuOpen(false); openModal('contact'); }} className="font-black text-3xl uppercase tracking-tighter text-lava mt-4">
+            <button onClick={() => { setMobileMenuOpen(false); openModal('contact'); }} className="font-black text-3xl uppercase tracking-tighter text-lava mt-4 transition-transform duration-300 hover:scale-105">
               {t('nav.discuss')}
             </button>
 
@@ -180,7 +181,7 @@ export default function Header() {
                 <button 
                   key={lang} 
                   onClick={() => { changeLang(lang); setMobileMenuOpen(false); }} 
-                  className={`font-mono text-sm font-bold uppercase tracking-widest px-4 py-2 border ${i18n.language === lang ? 'border-lava text-lava' : 'border-beige/20 text-beige/50'}`}
+                  className={`font-mono text-sm font-bold uppercase tracking-widest px-4 py-2 border transition-colors duration-300 ${i18n.language === lang ? 'border-lava text-lava' : 'border-beige/20 text-beige/50 hover:border-lava/50 hover:text-beige'}`}
                 >
                   {lang}
                 </button>

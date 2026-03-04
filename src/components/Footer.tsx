@@ -30,7 +30,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-24 w-full lg:w-auto mt-12 lg:mt-8">
           <div className="space-y-4 md:space-y-6">
             <p className="font-mono text-[9px] md:text-[10px] font-bold uppercase tracking-[0.3em] text-beige/30 mb-4 md:mb-8">{t('footer.contacts')}</p>
-            <a className="block font-mono font-bold text-xs sm:text-sm md:text-base text-beige hover:text-lava transition-colors break-all" href="mailto:bitforge.digital@mail.ru">bitforge.digital@mail.ru</a>
+            <a className="block font-mono font-bold text-xs sm:text-sm md:text-base text-beige hover:text-lava transition-colors break-all" href="mailto:Mail@bitforge.digital">Mail@bitforge.digital</a>
             <a className="block font-mono font-bold text-xs sm:text-sm md:text-base text-beige hover:text-lava transition-colors" href="tel:+79660847799">+7 (966) 084-77-99</a>
             <button 
               onClick={() => openModal('faq')}

@@ -33,7 +33,7 @@ export default function Metrics() {
   }, [isInView]);
 
   return (
-    <section ref={ref} className="bg-beige text-dark py-12 md:py-24 relative z-10 mb-[20vh] md:mb-[25vh]">
+    <section ref={ref} className="bg-beige text-dark py-12 md:py-24 relative z-10 mb-[10vh] md:mb-[15vh]">
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-0">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}

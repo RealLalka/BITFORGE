@@ -32,12 +32,12 @@ export default function YoungDesign({ caseData, assetFolder }: { caseData: any, 
 
       {/* Purple Glow Effects */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-        <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-lava rounded-full mix-blend-screen filter blur-[150px] opacity-10"></div>
-        <div className="absolute bottom-[-10%] right-[10%] w-[600px] h-[600px] bg-lava rounded-full mix-blend-screen filter blur-[200px] opacity-10"></div>
+        <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-lava mix-blend-screen filter blur-[150px] opacity-10"></div>
+        <div className="absolute bottom-[-10%] right-[10%] w-[600px] h-[600px] bg-lava mix-blend-screen filter blur-[200px] opacity-10"></div>
       </div>
 
       <div className="pt-32 pb-24 relative z-10">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
           <Link to="/portfolio" className="inline-flex items-center gap-2 text-beige/50 hover:text-lava font-mono text-xs uppercase tracking-widest mb-12 transition-colors">
             <ArrowLeft size={16} /> {t('case.back')}
           </Link>
@@ -78,7 +78,7 @@ export default function YoungDesign({ caseData, assetFolder }: { caseData: any, 
           transition={{ delay: 0.2, duration: 0.8 }}
           className="max-w-[1400px] mx-auto px-4 md:px-8 mb-32"
         >
-          <div className="w-full aspect-video md:aspect-[21/9] bg-[#0a0a0a] rounded-2xl md:rounded-[40px] border border-white/5 relative overflow-hidden shadow-[0_30px_100px_rgba(255,77,0,0.15)] group">
+          <div className="w-full aspect-video md:aspect-[21/9] bg-[#0a0a0a] border border-white/5 relative overflow-hidden shadow-[0_30px_100px_rgba(255,77,0,0.15)] group">
             <video 
               className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700 group-hover:scale-105"
               autoPlay 
@@ -99,8 +99,8 @@ export default function YoungDesign({ caseData, assetFolder }: { caseData: any, 
           </div>
         </motion.div>
 
-        <div className="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-16">
-          <div className="md:col-span-2 space-y-16">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-16">
+          <div className="md:col-span-3 space-y-16">
             <section>
               <h2 className="text-3xl font-black uppercase text-white tracking-tight mb-8 flex items-center gap-4">
                 <span className="w-12 h-[3px] bg-lava shadow-[0_0_15px_rgba(255,77,0,0.5)]"></span>
@@ -108,27 +108,27 @@ export default function YoungDesign({ caseData, assetFolder }: { caseData: any, 
               </h2>
               <div className="font-mono text-beige/70 text-base leading-relaxed space-y-8">
                 {caseData.challenge && (
-                  <div className="bg-white/[0.02] border border-white/5 p-8 rounded-2xl hover:border-lava/30 transition-colors">
+                  <div className="bg-white/[0.02] border border-white/5 p-8 hover:border-lava/30 transition-colors">
                     <h4 className="text-lava font-bold uppercase tracking-widest mb-3 text-xs flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-lava animate-pulse"></span>
+                      <span className="w-2 h-2 bg-lava animate-pulse"></span>
                       {t('case.challenge')}
                     </h4>
                     <p>{caseData.challenge}</p>
                   </div>
                 )}
                 {caseData.solution && (
-                  <div className="bg-white/[0.02] border border-white/5 p-8 rounded-2xl hover:border-lava/30 transition-colors">
+                  <div className="bg-white/[0.02] border border-white/5 p-8 hover:border-lava/30 transition-colors">
                     <h4 className="text-lava font-bold uppercase tracking-widest mb-3 text-xs flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-lava"></span>
+                      <span className="w-2 h-2 bg-lava"></span>
                       {t('case.solution')}
                     </h4>
                     <p>{caseData.solution}</p>
                   </div>
                 )}
                 {caseData.result && (
-                  <div className="bg-white/[0.02] border border-white/5 p-8 rounded-2xl hover:border-lava/30 transition-colors">
+                  <div className="bg-white/[0.02] border border-white/5 p-8 hover:border-lava/30 transition-colors">
                     <h4 className="text-lava font-bold uppercase tracking-widest mb-3 text-xs flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full bg-lava"></span>
+                      <span className="w-2 h-2 bg-lava"></span>
                       {t('case.result')}
                     </h4>
                     <p>{caseData.result}</p>
@@ -143,18 +143,18 @@ export default function YoungDesign({ caseData, assetFolder }: { caseData: any, 
               </div>
             </section>
 
-            
+
           </div>
 
           <div className="space-y-12">
-            <section className="bg-white/[0.02] border border-white/5 rounded-2xl p-8 sticky top-32 backdrop-blur-md">
+            <section className="bg-white/[0.02] border border-white/5 p-8 sticky top-32 backdrop-blur-md">
               <h3 className="text-xl font-black uppercase text-white tracking-tight mb-8 flex items-center gap-3">
                 <span className="w-2 h-2 bg-lava"></span>
                 {t('case.stack')}
               </h3>
               <div className="flex flex-wrap gap-3">
                 {['React', 'Node.js', 'PostgreSQL', 'Docker', 'Kubernetes', 'Redis'].map((tech) => (
-                  <span key={tech} className="font-mono text-xs text-beige/80 uppercase tracking-widest border border-white/10 px-4 py-2 rounded-full bg-black/50 hover:border-lava hover:text-lava transition-colors cursor-default">
+                  <span key={tech} className="font-mono text-xs text-beige/80 uppercase tracking-widest border border-white/10 px-4 py-2 bg-black/50 hover:border-lava hover:text-lava transition-colors cursor-default">
                     {tech}
                   </span>
                 ))}

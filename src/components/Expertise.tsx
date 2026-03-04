@@ -7,7 +7,7 @@ export default function Expertise() {
   const safeItems = Array.isArray(items) ? items : [];
 
   return (
-    <section className="bg-dark relative mb-[20vh] md:mb-[30vh]">
+    <section className="bg-dark relative mb-[10vh] md:mb-[15vh]">
       <div className="hidden md:flex sticky top-0 h-screen items-center justify-center pointer-events-none z-0 overflow-hidden">
         <h2 className="text-[clamp(4rem,16vw,260px)] font-black uppercase text-beige/[0.04] select-none text-center leading-[0.8] tracking-tighter w-full whitespace-nowrap">
           {t('expertise.title')}

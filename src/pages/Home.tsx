@@ -19,7 +19,7 @@ export default function Home() {
       <Ribbons />
       <CasesPreview />
       
-      <section className="bg-dark py-24 md:py-48 relative z-10 flex flex-col items-center justify-center px-4 text-center mb-[15vh] md:mb-[20vh]">
+      <section className="bg-dark py-24 md:py-48 relative z-10 flex flex-col items-center justify-center px-4 text-center mb-[8vh] md:mb-[12vh]">
         <motion.h2 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

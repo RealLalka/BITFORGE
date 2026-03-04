@@ -6,19 +6,24 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void; 
   const [phase, setPhase] = useState<'loading' | 'complete'>('loading');
 
   useEffect(() => {
+    const duration = 2500; // total duration
+    const startTime = Date.now();
+    
     const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setPhase('complete');
-          setTimeout(onComplete, 1500); // Wait for exit animation
-          return 100;
-        }
-        // Slower at the end
-        const increment = prev > 80 ? Math.random() * 2 : Math.random() * 15;
-        return Math.min(100, prev + increment);
-      });
-    }, 50);
+      const elapsed = Date.now() - startTime;
+      // Use easeOut cubic for smoother progress
+      const t = Math.min(elapsed / duration, 1);
+      const easeOut = 1 - Math.pow(1 - t, 3);
+      const p = easeOut * 100;
+      
+      setProgress(p);
+      
+      if (t >= 1) {
+        clearInterval(interval);
+        setPhase('complete');
+        setTimeout(onComplete, 500); // Wait for exit animation
+      }
+    }, 16);
 
     return () => clearInterval(interval);
   }, [onComplete]);
@@ -30,28 +35,44 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void; 
       exit={{ opacity: 0, transition: { duration: 1, ease: [0.76, 0, 0.24, 1] } }}
     >
       {/* Background Grid Build-up */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
+      <div className="absolute inset-0 pointer-events-none">
         <motion.div 
-          className="w-full h-full"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '40px 40px'
-          }}
+          layoutId="hero-grid"
+          className="grid-bg"
+          style={{ height: '150vh' }}
           initial={{ clipPath: 'circle(0% at 50% 50%)' }}
-          animate={{ clipPath: phase === 'complete' ? 'circle(150% at 50% 50%)' : `circle(${progress * 0.5}% at 50% 50%)` }}
-          transition={{ duration: phase === 'complete' ? 1.5 : 0.1, ease: "easeOut" }}
+          animate={{ clipPath: phase === 'complete' ? 'circle(150% at 50% 50%)' : `circle(${progress * 1.5}% at 50% 50%)` }}
+          transition={{ duration: phase === 'complete' ? 0.5 : 0.1, ease: "easeOut" }}
         />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,77,0,0.06),transparent_70%)] pointer-events-none"></div>
       </div>
 
       {/* Logo Reveal */}
       <div className="relative z-10 flex flex-col items-center">
+        {/* Typing Text */}
+        <div className="mb-8 flex items-center justify-center">
+          <motion.h1 
+            layoutId="hero-title"
+            className="text-[clamp(4rem,18vw,240px)] font-black leading-[0.75] tracking-tighter uppercase text-beige select-none pl-[0.05em]"
+            initial={{ opacity: 1 }}
+          >
+            {"BITFORGE".split('').map((char, i) => (
+              <motion.span
+                key={i}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: i * 0.15, duration: 0.1 }}
+              >
+                {char}
+              </motion.span>
+            ))}
+          </motion.h1>
+        </div>
+
         <motion.div 
           className="relative w-64 h-32 flex items-center justify-center"
           initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
+          animate={{ scale: phase === 'complete' ? 1.2 : 1, opacity: phase === 'complete' ? 0 : 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.svg 

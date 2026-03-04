@@ -8,7 +8,7 @@ export default function Team() {
   const safeMembers = Array.isArray(members) ? members : [];
 
   return (
-    <section className="bg-dark px-0 md:px-12 flex flex-col justify-center relative z-10 mb-[10vh] md:mb-[15vh]">
+    <section className="bg-dark px-0 md:px-12 flex flex-col justify-center relative z-10 mb-[6vh] md:mb-[10vh]">
       <div className="max-w-[1400px] mx-auto text-left md:text-center w-full">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

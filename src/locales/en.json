@@ -65,14 +65,49 @@
       "overview": "The design focused on minimizing cognitive load when analyzing large arrays of numerical data.\n\nUI components: Application of Glassmorphism for KPI cards, creating a hierarchy of layers and separating key indicators from secondary charts.\n\nVisual accents: Use of Subtle Gradient in line charts to indicate positive and negative dynamics, improving usability during quick screen scanning.\n\nUsability and Accessibility (a11y):\nNegative Space: Wide inter-module indents prevent visual merging of charts, ensuring clarity of perception (Minimalist style).\nFloating UI: The navigation menu and filters are implemented as floating panels, optimizing the useful screen area for data output.\nIntuitiveness: The use of standard \"top-down\" patterns (from general totals to detailed transactions) allows the user to seamlessly conduct a deep audit (Drill-down)."
     },
     "case6": {
-      "tag1": "Mobile",
-      "tag2": "Communication",
-      "title": "Wave Messenger",
-      "desc": "Secure corporate messaging platform with end-to-end encryption",
-      "challenge": "Develop a fault-tolerant architecture for real-time B2B communications, eliminating data compromise risks.",
-      "solution": "Implemented a WebSocket-based protocol with decentralized validation and AES-256 hardware encryption.",
-      "result": "High-performance client with delivery latency <50ms and 99.99% SLA.",
-      "overview": "UI designed following Dark Linear Style patterns. Focus on Negative Space and typography to reduce cognitive load. \n\nUsability: Implemented Floating UI for contextual message menus and navigation, providing intuitive access to functions.\n\nVisual accents: Subtle Gradient and Glowing Borders are used precisely to indicate delivery status and active dialogues."
+      "tag1": "Messenger",
+      "tag2": "Security",
+      "title": "WAVE MESSENGER",
+      "desc": "Platform for secure corporate and personal communication",
+      "challenge": "Develop a scalable messaging environment with a focus on privacy and instant synchronization.",
+      "solution": "Designed a multi-platform application using End-to-End Encryption protocols and an adaptive interface.",
+      "result": "Group audio and video calls, channel system, media storage, and custom bot integration.",
+      "overview": "The visual strategy is based on Negative Space principles, allowing the user to focus on dialogues while minimizing distracting elements.\n\nUI components: Active implementation of Glassmorphism for side navigation panels, creating an effect of depth and content layering.\n\nVisual accents: Use of Subtle Gradient in message bubbles to highlight priority chats and read statuses.\n\nUsability and Accessibility (a11y):\n\nFloating UI: Buttons for creating new chats and media attachments are implemented as floating elements, accessible in one click.\n\nIntuitiveness: Gesture navigation (swipes) is integrated into UX patterns for quick management of archiving and replies.\n\nGraphic dominants: Minimalist icons with thin lines (Linear Style) ensure a clean interface with a high density of information flows."
+    }
+  },
+  "faq": {
+    "modalTitle": "FREQUENTLY ASKED QUESTIONS",
+    "modalSubtitle": "Answering the essentials",
+    "stillQuestions": "STILL HAVE QUESTIONS? WRITE TO US",
+    "items": [
+      {
+        "q": "How quickly can you start a project?",
+        "a": "After the initial call and signing of the NDA, team formation and the start of the Discovery phase take from 3 to 7 working days depending on the complexity of the architecture."
+      },
+      {
+        "q": "Do you work under NDA?",
+        "a": "Yes. Isolation and confidentiality of corporate data is our basic standard. An NDA is signed before any exchange of technical information begins."
+      },
+      {
+        "q": "What methodologies do you use?",
+        "a": "We use Agile frameworks (Scrum/Kanban) for product development, ensuring deterministic sprints and process transparency through task trackers."
+      }
+    ]
+  },
+  "contact": {
+    "modalTitle": "DISCUSS PROJECT",
+    "modalSubtitle": "Leave a request — our analyst will contact you within 15 minutes.",
+    "form": {
+      "name": "NAME",
+      "namePlaceholder": "Your name",
+      "phone": "PHONE",
+      "phonePlaceholder": "+7 (966) 084-77-99",
+      "email": "EMAIL",
+      "emailPlaceholder": "hello@mail.com",
+      "task": "TASK",
+      "taskPlaceholder": "Briefly about the project...",
+      "submit": "SEND REQUEST",
+      "privacy": "By clicking the button, you agree to the privacy policy"
     }
   },
   "cta": {
@@ -188,6 +223,7 @@
   "ui": {
     "more": "Learn more",
     "back": "Back",
+    "close": "Close",
     "mainMenu": "Main menu",
     "categories": "Service Categories",
     "steps": "Work steps",

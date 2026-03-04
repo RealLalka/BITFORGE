@@ -65,14 +65,49 @@
       "overview": "The design focused on minimizing cognitive load when analyzing large arrays of numerical data.\n\nUI components: Application of Glassmorphism for KPI cards, creating a hierarchy of layers and separating key indicators from secondary charts.\n\nVisual accents: Use of Subtle Gradient in line charts to indicate positive and negative dynamics, improving usability during quick screen scanning.\n\nUsability and Accessibility (a11y):\nNegative Space: Wide inter-module indents prevent visual merging of charts, ensuring clarity of perception (Minimalist style).\nFloating UI: The navigation menu and filters are implemented as floating panels, optimizing the useful screen area for data output.\nIntuitiveness: The use of standard \"top-down\" patterns (from general totals to detailed transactions) allows the user to seamlessly conduct a deep audit (Drill-down)."
     },
     "case6": {
-      "tag1": "Mobil",
-      "tag2": "İletişim",
-      "title": "Wave Messenger",
-      "desc": "Uçtan uca şifrelemeli güvenli kurumsal mesajlaşma platformu",
-      "challenge": "Veri ihlali risklerini ortadan kaldıran, B2B gerçek zamanlı iletişim için hataya dayanıklı bir mimari geliştirmek.",
-      "solution": "Merkezi olmayan doğrulama ve AES-256 donanım şifrelemeli WebSocket tabanlı protokol uygulandı.",
-      "result": "<50ms teslimat gecikmesi ve %99.99 SLA ile yüksek performanslı istemci.",
-      "overview": "Arayüz Dark Linear Style desenlerine göre tasarlandı. Bilişsel yükü azaltmak için Negative Space ve sıkı tipografiye odaklanıldı. \n\nKullanılabilirlik: Bağlamsal mesaj menüleri ve navigasyon için Floating UI uygulandı, işlevlere sezgisel erişim sağlandı.\n\nGörsel vurgular: Subtle Gradient ve Glowing Borders, teslimat durumunu ve aktif diyalogları belirtmek için hassas bir şekilde kullanılır."
+      "tag1": "Messenger",
+      "tag2": "Security",
+      "title": "WAVE MESSENGER",
+      "desc": "Güvenli kurumsal ve kişisel iletişim platformu",
+      "challenge": "Gizlilik ve anında senkronizasyon odaklı ölçeklenebilir bir mesajlaşma ortamı geliştirmek.",
+      "solution": "Uçtan Uca Şifreleme (End-to-End Encryption) protokolleri ve uyarlanabilir bir arayüz kullanılarak çok platformlu bir uygulama tasarlandı.",
+      "result": "Grup sesli ve görüntülü aramalar, kanal sistemi, medya depolama ve özel bot entegrasyonu.",
+      "overview": "Görsel strateji, kullanıcının dikkat dağıtıcı unsurları en aza indirirken diyaloglara odaklanmasını sağlayan Negatif Alan ilkelerine dayanmaktadır.\n\nUI bileşenleri: Yan gezinme panelleri için Glassmorphism'in aktif olarak uygulanması, derinlik ve içerik katmanlama etkisi yaratır.\n\nGörsel vurgular: Öncelikli sohbetleri ve okundu durumlarını vurgulamak için mesaj balonlarında İnce Gradyan kullanımı.\n\nKullanılabilirlik ve Erişilebilirlik (a11y):\n\nFloating UI: Yeni sohbetler oluşturma ve medya ekleri için düğmeler, tek tıklamayla erişilebilen yüzen öğeler olarak uygulanır.\n\nSezgisellik: Hareketle gezinme (kaydırmalar), arşivleme ve yanıtların hızlı yönetimi için UX kalıplarına entegre edilmiştir.\n\nGrafik baskınlar: İnce çizgili minimalist simgeler (Doğrusal Stil), yüksek bilgi akışı yoğunluğunda temiz bir arayüz sağlar."
+    }
+  },
+  "faq": {
+    "modalTitle": "SIKÇA SORULAN SORULAR",
+    "modalSubtitle": "Temel soruları yanıtlıyoruz",
+    "stillQuestions": "HALA SORULARINIZ MI VAR? BİZE YAZIN",
+    "items": [
+      {
+        "q": "Bir projeye ne kadar sürede başlayabilirsiniz?",
+        "a": "İlk görüşme ve NDA imzalanmasının ardından, ekip oluşturma ve Keşif aşamasının başlaması, mimarinin karmaşıklığına bağlı olarak 3 ila 7 iş günü sürer."
+      },
+      {
+        "q": "NDA kapsamında mı çalışıyorsunuz?",
+        "a": "Evet. Kurumsal verilerin izolasyonu ve gizliliği temel standardımızdır. Herhangi bir teknik bilgi alışverişi başlamadan önce bir NDA imzalanır."
+      },
+      {
+        "q": "Hangi metodolojileri kullanıyorsunuz?",
+        "a": "Ürün geliştirme için Agile çerçevelerini (Scrum/Kanban) kullanıyoruz, görev takipçileri aracılığıyla belirlenmiş sprintler ve süreç şeffaflığı sağlıyoruz."
+      }
+    ]
+  },
+  "contact": {
+    "modalTitle": "PROJEYİ TARTIŞ",
+    "modalSubtitle": "Bir talep bırakın — analistimiz 15 dakika içinde sizinle iletişime geçecektir.",
+    "form": {
+      "name": "İSİM",
+      "namePlaceholder": "Adınız",
+      "phone": "TELEFON",
+      "phonePlaceholder": "+7 (966) 084-77-99",
+      "email": "E-POSTA",
+      "emailPlaceholder": "hello@mail.com",
+      "task": "GÖREV",
+      "taskPlaceholder": "Proje hakkında kısaca...",
+      "submit": "TALEP GÖNDER",
+      "privacy": "Düğmeye tıklayarak gizlilik politikasını kabul etmiş olursunuz"
     }
   },
   "cta": {
@@ -188,6 +223,7 @@
   "ui": {
     "more": "Daha fazla",
     "back": "Geri",
+    "close": "Kapat",
     "mainMenu": "Ana menü",
     "categories": "Hizmet Kategorileri",
     "steps": "Çalışma adımları",
