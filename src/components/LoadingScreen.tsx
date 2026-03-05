@@ -1,7 +1,9 @@
 import { motion } from 'motion/react';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function LoadingScreen({ onComplete }: { onComplete: () => void; key?: string }) {
+  const { t } = useTranslation();
   const [progress, setProgress] = useState(0);
   const [phase, setPhase] = useState<'loading' | 'complete'>('loading');
 
@@ -30,10 +32,15 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void; 
 
   return (
     <motion.div
-      className="fixed inset-0 z-[100] bg-dark flex flex-col items-center justify-center overflow-hidden"
-      initial={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 1, ease: [0.76, 0, 0.24, 1] } }}
+      className="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden pointer-events-none"
+      exit={{ opacity: 1, transition: { duration: 1 } }}
     >
+      {/* Background that fades out */}
+      <motion.div 
+        className="absolute inset-0 bg-dark pointer-events-auto"
+        exit={{ opacity: 0, transition: { duration: 1, ease: [0.76, 0, 0.24, 1] } }}
+      />
+
       {/* Background Grid Build-up */}
       <div className="absolute inset-0 pointer-events-none">
         <motion.div 
@@ -44,7 +51,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void; 
           animate={{ clipPath: phase === 'complete' ? 'circle(150% at 50% 50%)' : `circle(${progress * 1.5}% at 50% 50%)` }}
           transition={{ duration: phase === 'complete' ? 0.5 : 0.1, ease: "easeOut" }}
         />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,77,0,0.06),transparent_70%)] pointer-events-none"></div>
+        <motion.div layoutId="hero-glow" className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,77,0,0.06),transparent_70%)] pointer-events-none"></motion.div>
       </div>
 
       {/* Logo Reveal */}
@@ -53,10 +60,12 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void; 
         <div className="mb-8 flex items-center justify-center">
           <motion.h1 
             layoutId="hero-title"
-            className="text-[clamp(4rem,18vw,240px)] font-black leading-[0.75] tracking-tighter uppercase text-beige select-none pl-[0.05em]"
-            initial={{ opacity: 1 }}
+            className="relative z-[101] text-[clamp(4rem,18vw,240px)] font-black leading-[0.75] tracking-tighter uppercase text-beige select-none pl-[0.05em]"
+            initial={{ opacity: 1, scale: 0.5 }}
+            transition={{ opacity: { duration: 0 } }}
+            style={{ originY: 0.5 }}
           >
-            {"BITFORGE".split('').map((char, i) => (
+            {phase === 'complete' ? t('hero.title') : t('hero.title').split('').map((char, i) => (
               <motion.span
                 key={i}
                 initial={{ opacity: 0 }}

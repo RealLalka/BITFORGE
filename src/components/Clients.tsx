@@ -11,7 +11,7 @@ export default function Clients() {
   const hiddenClients = ['MAIL.RU', 'MTS', 'MEGAFON', 'TELE2', 'KASPERSKY', 'ALFA'];
 
   return (
-    <section className="bg-dark flex flex-col justify-center relative z-10 px-6 md:px-12 mb-[10vh] md:mb-[15vh] overflow-hidden">
+    <section className="bg-dark flex flex-col justify-center relative z-10 px-6 md:px-12 mb-16 md:mb-32 overflow-hidden">
       <div className="absolute inset-0 grid-bg opacity-50" style={{ WebkitMaskImage: 'linear-gradient(to bottom, transparent, #0f0f0f 20%, #0f0f0f 80%, transparent)', maskImage: 'linear-gradient(to bottom, transparent, #0f0f0f 20%, #0f0f0f 80%, transparent)' }}></div>
 
       <div className="max-w-[1200px] mx-auto w-full flex flex-col items-center relative z-10">

@@ -29,7 +29,7 @@ export default function ContactModal() {
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-lava to-transparent opacity-50"></div>
             
             <button 
-              className="absolute top-4 right-4 text-beige/50 hover:text-lava hover:bg-white/5 rounded-full transition-colors duration-300 p-2" 
+              className="absolute top-4 right-4 text-beige/50 hover:text-lava hover:bg-white/5 transition-colors duration-300 p-2" 
               aria-label={t('ui.close')} 
               onClick={closeModal}
             >

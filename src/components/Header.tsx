@@ -44,11 +44,13 @@ export default function Header() {
           scrolled ? 'bg-dark/85 backdrop-blur-lg shadow-[0_1px_15px_1px_rgba(255,77,0,0.6)] border-b border-lava' : 'bg-transparent backdrop-blur-none'
         }`}
       >
-        <Link to="/" className="flex items-center gap-4 group cursor-pointer">
-          <img src="/assets/logo/logo.svg" alt="Bitforge" className="h-8 w-auto transition-transform duration-300 group-hover:scale-105" />
-        </Link>
+        <div className="flex-1 flex justify-start">
+          <Link to="/" className="flex items-center gap-4 group cursor-pointer">
+            <img src="/assets/logo/logo.svg" alt="Bitforge" className="h-8 w-auto transition-transform duration-300 group-hover:scale-105" />
+          </Link>
+        </div>
 
-        <div className="flex items-center gap-10 lg:gap-14">
+        <div className="flex items-center justify-center gap-10 lg:gap-14">
           <div 
             className="relative group h-20 flex items-center"
             onMouseEnter={() => setServicesOpen(true)}
@@ -107,7 +109,7 @@ export default function Header() {
           </button>
         </div>
 
-        <div className="flex items-center gap-6">
+        <div className="flex-1 flex justify-end items-center gap-6">
           <div 
             className="relative group h-20 flex items-center"
             onMouseEnter={() => setLangOpen(true)}
@@ -135,6 +137,13 @@ export default function Header() {
         </div>
       </nav>
 
+      {/* Mobile Floating UI - Logo (Top Left) */}
+      <div className="md:hidden fixed top-4 left-4 z-[60] pointer-events-auto">
+        <Link to="/">
+          <img src="/assets/logo/logo.svg" alt="Bitforge" className="h-10 w-auto drop-shadow-lg" />
+        </Link>
+      </div>
+
       {/* Mobile Floating UI - Single Burger Button (Top Right) */}
       <div className="md:hidden fixed top-4 right-4 z-[60] flex items-center justify-end pointer-events-none">
         <button 
@@ -161,7 +170,7 @@ export default function Header() {
         <div className={`absolute inset-0 px-6 flex flex-col justify-center items-center transition-transform duration-500 ${mobileMenuLevel !== 'main' ? '-translate-x-full' : 'translate-x-0'}`}>
           <div className="flex flex-col gap-8 items-center w-full max-w-sm">
             <Link to="/" onClick={() => setMobileMenuOpen(false)} className="font-black text-3xl uppercase tracking-tighter text-beige transition-colors duration-300 hover:text-lava">
-              Bitforge
+              {t('nav.home', 'Главная')}
             </Link>
             <button onClick={() => setMobileMenuLevel('categories')} className="font-black text-3xl uppercase tracking-tighter text-beige transition-colors duration-300 hover:text-lava flex items-center gap-2 group">
               {t('nav.services')} <ArrowRight size={24} className="text-lava transition-transform duration-300 group-hover:translate-x-1" />
@@ -194,7 +203,7 @@ export default function Header() {
         <div className={`absolute inset-0 pt-24 px-6 flex flex-col transition-transform duration-500 bg-dark/98 ${mobileMenuLevel === 'categories' ? 'translate-x-0' : (mobileMenuLevel === 'services' ? '-translate-x-full' : 'translate-x-full')}`}>
           <button 
             onClick={() => setMobileMenuLevel('main')}
-            className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-beige/50 hover:text-lava mb-8"
+            className="inline-flex items-center gap-3 text-beige font-mono text-xs md:text-sm uppercase tracking-widest hover:text-lava transition-colors px-6 py-3 border border-beige/20 hover:border-lava/50 bg-dark/50 backdrop-blur-sm mb-8 w-fit"
           >
             <ChevronLeft size={16} /> {t('ui.mainMenu')}
           </button>
@@ -221,7 +230,7 @@ export default function Header() {
         <div className={`absolute inset-0 pt-24 px-6 flex flex-col transition-transform duration-500 bg-dark/98 ${mobileMenuLevel === 'services' ? 'translate-x-0' : 'translate-x-full'}`}>
           <button 
             onClick={() => setMobileMenuLevel('categories')}
-            className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-beige/50 hover:text-lava mb-8"
+            className="inline-flex items-center gap-3 text-beige font-mono text-xs md:text-sm uppercase tracking-widest hover:text-lava transition-colors px-6 py-3 border border-beige/20 hover:border-lava/50 bg-dark/50 backdrop-blur-sm mb-8 w-fit"
           >
             <ChevronLeft size={16} /> {t('ui.categories')}
           </button>

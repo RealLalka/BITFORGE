@@ -1,7 +1,7 @@
 {
   "nav": {
     "services": "SERVICES",
-    "portfolio": "Solutions",
+    "portfolio": "Portfolio",
     "faq": "FAQ",
     "discuss": "DISCUSS PROJECT"
   },
@@ -71,8 +71,8 @@
       "desc": "Platform for secure corporate and personal communication",
       "challenge": "Develop a scalable messaging environment with a focus on privacy and instant synchronization.",
       "solution": "Designed a multi-platform application using End-to-End Encryption protocols and an adaptive interface.",
-      "result": "Group audio and video calls, channel system, media storage, and custom bot integration.",
-      "overview": "The visual strategy is based on Negative Space principles, allowing the user to focus on dialogues while minimizing distracting elements.\n\nUI components: Active implementation of Glassmorphism for side navigation panels, creating an effect of depth and content layering.\n\nVisual accents: Use of Subtle Gradient in message bubbles to highlight priority chats and read statuses.\n\nUsability and Accessibility (a11y):\n\nFloating UI: Buttons for creating new chats and media attachments are implemented as floating elements, accessible in one click.\n\nIntuitiveness: Gesture navigation (swipes) is integrated into UX patterns for quick management of archiving and replies.\n\nGraphic dominants: Minimalist icons with thin lines (Linear Style) ensure a clean interface with a high density of information flows."
+      "result": "Group audio and video calls, channel system, media file storage, and custom bot integration.",
+      "overview": "Tech Esthetics & UX Analysis\nThe visual strategy is based on Negative Space principles, allowing the user to focus on dialogues while minimizing distracting elements.\n\nUI components: Active implementation of Glassmorphism for side navigation panels, creating a depth and content layering effect.\n\nVisual accents: Use of Subtle Gradient in message bubbles to highlight priority chats and read statuses.\n\nUsability and Accessibility (a11y):\nFloating UI: Buttons for creating new chats and media attachments are implemented as floating elements, accessible in one click.\nIntuitiveness: Gesture navigation (swipes) is integrated into UX patterns for quick management of archiving and replies.\nGraphic dominants: Minimalist icons with thin lines (Linear Style) ensure interface cleanliness during high-density information flows."
     }
   },
   "faq": {
@@ -204,12 +204,12 @@
     "copyright": "© 2026 BITFORGE INC."
   },
   "portfolio": {
-    "title": "Solutions",
+    "title": "Portfolio",
     "subtitle": "Our successful projects",
     "view_case": "VIEW CASE"
   },
   "case": {
-    "back": "Back to solutions",
+    "back": "Back to portfolio",
     "overview": "Project Overview",
     "stack": "Tech Stack",
     "gallery": "Gallery",
@@ -223,7 +223,6 @@
   "ui": {
     "more": "Learn more",
     "back": "Back",
-    "close": "Close",
     "mainMenu": "Main menu",
     "categories": "Service Categories",
     "steps": "Work steps",

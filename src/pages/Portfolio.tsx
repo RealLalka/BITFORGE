@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 export default function Portfolio() {
   const { t } = useTranslation();
@@ -59,6 +60,16 @@ export default function Portfolio() {
   return (
     <div className="pt-32 pb-24 px-6 md:px-12 max-w-[1600px] mx-auto min-h-screen">
       <motion.div 
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        className="mb-8"
+      >
+        <Link to="/" className="inline-flex items-center gap-3 text-beige font-mono text-xs md:text-sm uppercase tracking-widest hover:text-lava transition-colors px-6 py-3 border border-beige/20 hover:border-lava/50 bg-dark/50 backdrop-blur-sm">
+          <ArrowLeft size={16} /> {t('ui.mainMenu', 'Главная')}
+        </Link>
+      </motion.div>
+
+      <motion.div 
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         className="mb-16 md:mb-24 text-center"
@@ -71,7 +82,7 @@ export default function Portfolio() {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-12">
         {cases.map((c, idx) => (
           <motion.div 
             key={c.id}

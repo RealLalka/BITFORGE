@@ -33,7 +33,7 @@ export default function FaqModal() {
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-lava to-transparent opacity-50"></div>
             
             <button 
-              className="absolute top-4 right-4 text-beige/50 hover:text-lava hover:bg-white/5 rounded-full transition-colors duration-300 p-2" 
+              className="absolute top-4 right-4 text-beige/50 hover:text-lava hover:bg-white/5 transition-colors duration-300 p-2" 
               aria-label={t('ui.close')} 
               onClick={closeModal}
             >
@@ -49,18 +49,33 @@ export default function FaqModal() {
               {faqs.map((faq, idx) => (
                 <div 
                   key={idx} 
-                  className="border border-beige/20 bg-dark p-5 hover:border-lava/50 transition-colors duration-300 cursor-pointer faq-item group"
-                  onClick={() => setOpenItem(openItem === idx ? null : idx)}
+                  className="border border-beige/20 bg-dark hover:border-lava/50 transition-colors duration-300 group"
                 >
-                  <div className="flex justify-between items-center w-full outline-none">
-                    <h3 className="font-bold text-beige text-xs md:text-sm uppercase tracking-tight text-left pr-4 leading-relaxed group-hover:text-lava transition-colors">{faq.q}</h3>
-                    <Plus size={18} className={`text-lava transition-transform duration-300 ${openItem === idx ? 'rotate-45' : ''}`} />
-                  </div>
-                  <div className={`overflow-hidden transition-all duration-300 ${openItem === idx ? 'max-h-40 opacity-100 mt-4 border-t border-beige/20 pt-4' : 'max-h-0 opacity-0'}`}>
-                    <p className="font-mono text-beige/90 text-xs leading-relaxed">
-                      {faq.a}
-                    </p>
-                  </div>
+                  <button
+                    className="flex justify-between items-center w-full p-5 text-left outline-none"
+                    onClick={() => setOpenItem(openItem === idx ? null : idx)}
+                    aria-expanded={openItem === idx}
+                  >
+                    <h3 className="font-bold text-beige text-xs md:text-sm uppercase tracking-tight pr-4 leading-relaxed group-hover:text-lava transition-colors">{faq.q}</h3>
+                    <Plus size={18} className={`text-lava transition-transform duration-300 shrink-0 ${openItem === idx ? 'rotate-45' : ''}`} />
+                  </button>
+                  <AnimatePresence>
+                    {openItem === idx && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="p-5 pt-0 border-t border-beige/10 mt-2">
+                          <p className="font-mono text-beige/90 text-xs leading-relaxed">
+                            {faq.a}
+                          </p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               ))}
             </div>

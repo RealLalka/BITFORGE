@@ -7,7 +7,7 @@ export default function Pipeline() {
   const safeSteps = Array.isArray(steps) ? steps : [];
 
   return (
-    <section className="bg-dark px-6 md:px-12 relative z-10 flex items-center justify-center mb-[10vh] py-12 md:py-32">
+    <section className="bg-dark px-6 md:px-12 relative z-10 flex items-center justify-center mb-16 md:mb-32 py-12 md:py-24">
       <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-40 items-start w-full">
         
         <motion.div 

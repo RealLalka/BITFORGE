@@ -1,7 +1,7 @@
 {
   "nav": {
     "services": "HİZMETLER",
-    "portfolio": "Çözümler",
+    "portfolio": "Portfolyo",
     "faq": "SSS",
     "discuss": "PROJEYİ TARTIŞ"
   },
@@ -58,21 +58,21 @@
       "tag1": "Dashboard",
       "tag2": "Finance",
       "title": "FINANCIAL DASHBOARD",
-      "desc": "Analytical dashboard for capital and liquidity management",
-      "challenge": "Aggregate disparate financial flows into a single interface with instant access to performance metrics (P&L, Cash Flow).",
-      "solution": "Development of a modular asset management system based on Dark Linear Style, providing real-time visualization of transactions.",
-      "result": "Interactive charts, a predictive cash gap forecasting system, and export of detailed reporting.",
-      "overview": "The design focused on minimizing cognitive load when analyzing large arrays of numerical data.\n\nUI components: Application of Glassmorphism for KPI cards, creating a hierarchy of layers and separating key indicators from secondary charts.\n\nVisual accents: Use of Subtle Gradient in line charts to indicate positive and negative dynamics, improving usability during quick screen scanning.\n\nUsability and Accessibility (a11y):\nNegative Space: Wide inter-module indents prevent visual merging of charts, ensuring clarity of perception (Minimalist style).\nFloating UI: The navigation menu and filters are implemented as floating panels, optimizing the useful screen area for data output.\nIntuitiveness: The use of standard \"top-down\" patterns (from general totals to detailed transactions) allows the user to seamlessly conduct a deep audit (Drill-down)."
+      "desc": "Sermaye ve likidite yönetimi için analitik gösterge paneli",
+      "challenge": "Dağınık finansal akışları, performans metriklerine (P&L, Cash Flow) anında erişim sağlayan tek bir arayüzde toplamak.",
+      "solution": "İşlemlerin gerçek zamanlı görselleştirilmesini sağlayan Dark Linear Style tabanlı modüler bir varlık yönetim sistemi geliştirilmesi.",
+      "result": "Etkileşimli grafikler, öngörücü nakit açığı tahmin sistemi ve ayrıntılı raporlama dışa aktarımı.",
+      "overview": "Tasarım, büyük sayısal veri dizilerini analiz ederken bilişsel yükü en aza indirmeye odaklanmıştır.\n\nUI bileşenleri: KPI kartları için Glassmorphism uygulaması, katman hiyerarşisi oluşturarak ana göstergeleri ikincil grafiklerden ayırır.\n\nGörsel vurgular: Pozitif ve negatif dinamikleri belirtmek için çizgi grafiklerinde Subtle Gradient kullanımı, hızlı ekran taraması sırasında kullanılabilirliği artırır.\n\nKullanılabilirlik ve Erişilebilirlik (a11y):\nNegative Space: Geniş modüller arası boşluklar, grafiklerin görsel olarak birleşmesini önleyerek algı netliğini sağlar (Minimalist stil).\nFloating UI: Navigasyon menüsü ve filtreler, verilerin çıktısı için yararlı ekran alanını optimize eden yüzen paneller olarak uygulanmıştır.\nSezgisellik: Standart \"yukarıdan aşağıya\" desenlerinin (genel toplamdan ayrıntılı işlemlere kadar) kullanımı, kullanıcının sorunsuz bir şekilde derinlemesine denetim (Drill-down) yapmasını sağlar."
     },
     "case6": {
       "tag1": "Messenger",
       "tag2": "Security",
       "title": "WAVE MESSENGER",
       "desc": "Güvenli kurumsal ve kişisel iletişim platformu",
-      "challenge": "Gizlilik ve anında senkronizasyon odaklı ölçeklenebilir bir mesajlaşma ortamı geliştirmek.",
+      "challenge": "Gizlilik ve anlık senkronizasyona odaklanan ölçeklenebilir bir mesajlaşma ortamı geliştirmek.",
       "solution": "Uçtan Uca Şifreleme (End-to-End Encryption) protokolleri ve uyarlanabilir bir arayüz kullanılarak çok platformlu bir uygulama tasarlandı.",
-      "result": "Grup sesli ve görüntülü aramalar, kanal sistemi, medya depolama ve özel bot entegrasyonu.",
-      "overview": "Görsel strateji, kullanıcının dikkat dağıtıcı unsurları en aza indirirken diyaloglara odaklanmasını sağlayan Negatif Alan ilkelerine dayanmaktadır.\n\nUI bileşenleri: Yan gezinme panelleri için Glassmorphism'in aktif olarak uygulanması, derinlik ve içerik katmanlama etkisi yaratır.\n\nGörsel vurgular: Öncelikli sohbetleri ve okundu durumlarını vurgulamak için mesaj balonlarında İnce Gradyan kullanımı.\n\nKullanılabilirlik ve Erişilebilirlik (a11y):\n\nFloating UI: Yeni sohbetler oluşturma ve medya ekleri için düğmeler, tek tıklamayla erişilebilen yüzen öğeler olarak uygulanır.\n\nSezgisellik: Hareketle gezinme (kaydırmalar), arşivleme ve yanıtların hızlı yönetimi için UX kalıplarına entegre edilmiştir.\n\nGrafik baskınlar: İnce çizgili minimalist simgeler (Doğrusal Stil), yüksek bilgi akışı yoğunluğunda temiz bir arayüz sağlar."
+      "result": "Grup sesli ve görüntülü aramalar, kanal sistemi, medya dosyası depolama ve özel bot entegrasyonu.",
+      "overview": "Teknik Estetik ve UX Analizi\nGörsel strateji, kullanıcının dikkat dağıtıcı unsurları en aza indirirken diyaloglara odaklanmasını sağlayan Negative Space ilkelerine dayanmaktadır.\n\nUI bileşenleri: Yan navigasyon panelleri için Glassmorphism'in aktif uygulaması, derinlik ve içerik katmanlama etkisi yaratır.\n\nGörsel vurgular: Öncelikli sohbetleri ve okundu durumlarını vurgulamak için mesaj balonlarında Subtle Gradient kullanımı.\n\nKullanılabilirlik ve Erişilebilirlik (a11y):\nFloating UI: Yeni sohbetler oluşturma ve medya ekleme düğmeleri, tek tıkla erişilebilen yüzen öğeler olarak uygulanmıştır.\nSezgisellik: Arşivleme ve yanıtların hızlı yönetimi için UX desenlerine jest navigasyonu (kaydırma) entegre edilmiştir.\nGrafik baskınlar: İnce çizgili minimalist simgeler (Linear Style), yüksek yoğunluklu bilgi akışları sırasında arayüz temizliğini sağlar."
     }
   },
   "faq": {
@@ -204,12 +204,12 @@
     "copyright": "© 2026 BITFORGE INC."
   },
   "portfolio": {
-    "title": "Çözümler",
+    "title": "Portfolyo",
     "subtitle": "Başarılı projelerimiz",
     "view_case": "ÖRNEĞİ İNCELE"
   },
   "case": {
-    "back": "Çözümlere dön",
+    "back": "Portfolyoya dön",
     "overview": "Proje Özeti",
     "stack": "Teknolojiler",
     "gallery": "Galeri",
@@ -223,7 +223,6 @@
   "ui": {
     "more": "Daha fazla",
     "back": "Geri",
-    "close": "Kapat",
     "mainMenu": "Ana menü",
     "categories": "Hizmet Kategorileri",
     "steps": "Çalışma adımları",

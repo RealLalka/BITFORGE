@@ -1,49 +1,56 @@
 import { useTranslation } from 'react-i18next';
 import { useModal } from '../context/ModalContext';
+import { useLocation } from 'react-router-dom';
 
 export default function Footer() {
   const { t } = useTranslation();
   const { openModal } = useModal();
+  const location = useLocation();
+  const isCompact = location.pathname.includes('/case/') || location.pathname === '/portfolio';
 
   return (
-    <footer className="bg-dark relative overflow-hidden pt-24 md:pt-32 pb-24 md:pb-12 px-6 md:px-12 mt-auto min-h-[80vh] flex flex-col justify-end border-t border-beige/10 z-10">
+    <footer className={`bg-dark relative overflow-hidden px-6 md:px-12 mt-auto flex flex-col justify-end border-t border-beige/10 z-10 ${isCompact ? 'pt-12 md:pt-16 pb-12 min-h-[40vh]' : 'pt-16 md:pt-32 pb-16 md:pb-12 min-h-[60vh] md:min-h-[80vh]'}`}>
       <div className="absolute inset-0 bg-dark z-0 pointer-events-none" style={{ background: 'linear-gradient(to bottom, transparent, #0f0f0f 80%)' }}></div>
 
-      <div className="absolute bottom-10 md:bottom-10 left-0 w-full text-center pointer-events-none opacity-[0.03] select-none flex flex-col justify-end h-full overflow-hidden z-0" style={{ WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 60%)', maskImage: 'linear-gradient(to top, transparent 0%, black 60%)' }}>
-        <span className="text-[clamp(4rem,25vw,350px)] font-black font-sans leading-[0.7] text-beige block tracking-tighter">BITFORGE</span>
+      <div className={`absolute left-0 w-full text-center pointer-events-none opacity-[0.03] select-none flex flex-col justify-end h-full overflow-hidden z-0 ${isCompact ? 'bottom-0' : 'bottom-10 md:bottom-10'}`} style={{ WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 60%)', maskImage: 'linear-gradient(to top, transparent 0%, black 60%)' }}>
+        <span className={`font-black font-sans leading-[0.7] text-beige block tracking-tighter ${isCompact ? 'text-[clamp(2rem,15vw,200px)]' : 'text-[clamp(4rem,25vw,350px)]'}`}>BITFORGE</span>
       </div>
       
-      <div className="max-w-[1600px] mx-auto relative z-20 flex flex-col lg:flex-row justify-between items-start gap-16 md:gap-20 mb-20 md:mb-32 w-full">
+      <div className={`max-w-[1600px] mx-auto relative z-20 flex flex-col lg:flex-row justify-between items-start gap-12 md:gap-20 w-full ${isCompact ? 'mb-10 md:mb-16' : 'mb-16 md:mb-32'}`}>
         <div className="max-w-4xl text-left w-full lg:w-auto">
-          <h2 className="text-[clamp(3rem,12vw,150px)] font-black uppercase leading-[0.8] tracking-tighter mb-10 md:mb-12 cursor-default">
+          <h2 className={`font-black uppercase leading-[0.85] tracking-tighter cursor-default ${isCompact ? 'text-[clamp(2.5rem,8vw,100px)] mb-6 md:mb-8' : 'text-[clamp(3.5rem,12vw,150px)] mb-8 md:mb-12'}`}>
             <span className="text-beige block">{t('footer.title1')}</span>
             <span className="text-lava block">{t('footer.title2')}</span>
           </h2>
           <button 
             onClick={() => openModal('contact')}
-            className="linear-btn bg-transparent hover:bg-lava !border-beige/30 hover:!border-lava text-beige hover:text-dark"
+            className="linear-btn bg-transparent hover:bg-lava !border-beige/30 hover:!border-lava text-beige hover:text-dark w-full sm:w-auto text-center justify-center"
           >
             {t('footer.btn')}
           </button>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-24 w-full lg:w-auto mt-12 lg:mt-8">
-          <div className="space-y-4 md:space-y-6">
-            <p className="font-mono text-[9px] md:text-[10px] font-bold uppercase tracking-[0.3em] text-beige/30 mb-4 md:mb-8">{t('footer.contacts')}</p>
-            <a className="block font-mono font-bold text-xs sm:text-sm md:text-base text-beige hover:text-lava transition-colors break-all" href="mailto:Mail@bitforge.digital">Mail@bitforge.digital</a>
-            <a className="block font-mono font-bold text-xs sm:text-sm md:text-base text-beige hover:text-lava transition-colors" href="tel:+79660847799">+7 (966) 084-77-99</a>
-            <button 
-              onClick={() => openModal('faq')}
-              className="block font-mono font-bold text-[9px] md:text-[11px] uppercase tracking-widest text-lava mt-8 md:mt-12 hover:underline underline-offset-4 cursor-pointer bg-transparent border-none text-left"
-            >
-              {t('footer.faq')}
-            </button>
+        <div className="grid grid-cols-2 gap-8 md:gap-24 w-full lg:w-auto mt-8 lg:mt-8 border-t border-beige/10 pt-8 lg:border-t-0 lg:pt-0">
+          <div className="flex flex-col">
+            <p className="font-mono text-[9px] md:text-[10px] font-bold uppercase tracking-[0.3em] text-beige/30 mb-6 md:mb-8">{t('footer.contacts')}</p>
+            <div className="flex flex-col gap-4 md:gap-6">
+              <a className="block font-mono font-bold text-[10px] sm:text-sm md:text-base text-beige hover:text-lava transition-colors uppercase tracking-widest whitespace-nowrap" href="mailto:Mail@bitforge.digital">Mail@bitforge.digital</a>
+              <a className="block font-mono font-bold text-[10px] sm:text-sm md:text-base text-beige hover:text-lava transition-colors uppercase tracking-widest whitespace-nowrap" href="tel:+79660847799">+7 (966) 084-77-99</a>
+              <button 
+                onClick={() => openModal('faq')}
+                className="block font-mono font-bold text-[10px] sm:text-sm md:text-base uppercase tracking-widest text-lava hover:underline underline-offset-4 cursor-pointer bg-transparent border-none text-left"
+              >
+                {t('footer.faq')}
+              </button>
+            </div>
           </div>
-          <div className="space-y-4 md:space-y-6">
-            <p className="font-mono text-[9px] md:text-[10px] font-bold uppercase tracking-[0.3em] text-beige/30 mb-4 md:mb-8">{t('footer.social')}</p>
-            <a className="block font-mono font-bold text-[9px] md:text-[11px] uppercase tracking-widest text-beige/80 hover:text-lava transition-colors" href="#">TELEGRAM</a>
-            <a className="block font-mono font-bold text-[9px] md:text-[11px] uppercase tracking-widest text-beige/80 hover:text-lava transition-colors" href="#">GITHUB</a>
-            <a className="block font-mono font-bold text-[9px] md:text-[11px] uppercase tracking-widest text-beige/80 hover:text-lava transition-colors" href="#">BEHANCE</a>
+          <div className="flex flex-col">
+            <p className="font-mono text-[9px] md:text-[10px] font-bold uppercase tracking-[0.3em] text-beige/30 mb-6 md:mb-8">{t('footer.social')}</p>
+            <div className="flex flex-col gap-4 md:gap-6">
+              <a className="block font-mono font-bold text-[10px] sm:text-sm md:text-base text-beige hover:text-lava transition-colors uppercase tracking-widest" href="#">TELEGRAM</a>
+              <a className="block font-mono font-bold text-[10px] sm:text-sm md:text-base text-beige hover:text-lava transition-colors uppercase tracking-widest" href="#">GITHUB</a>
+              <a className="block font-mono font-bold text-[10px] sm:text-sm md:text-base text-beige hover:text-lava transition-colors uppercase tracking-widest" href="#">BEHANCE</a>
+            </div>
           </div>
         </div>
       </div>

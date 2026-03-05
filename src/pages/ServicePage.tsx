@@ -47,7 +47,7 @@ export default function ServicePage() {
   return (
     <div className="min-h-screen bg-dark pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-6 md:px-12">
-        <Link to="/" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-beige/50 hover:text-lava mb-12 transition-colors">
+        <Link to="/" className="inline-flex items-center gap-3 text-beige font-mono text-xs md:text-sm uppercase tracking-widest hover:text-lava transition-colors px-6 py-3 border border-beige/20 hover:border-lava/50 bg-dark/50 backdrop-blur-sm mb-12">
           <ArrowLeft size={16} /> {t('ui.back')}
         </Link>
         

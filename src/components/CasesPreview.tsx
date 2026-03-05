@@ -87,7 +87,7 @@ export default function CasesPreview() {
               <img 
                 src={`/assets/cases/${c.assetFolder}/hero-screenshot.png`}
                 alt={c.title.toString()}
-                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 grayscale group-hover:grayscale-0 transition-transform duration-700 group-hover:scale-105"
+                className="absolute inset-0 w-full h-full object-cover opacity-100 lg:opacity-80 lg:group-hover:opacity-100 grayscale-0 lg:grayscale lg:group-hover:grayscale-0 transition-transform duration-700 group-hover:scale-105"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = `https://picsum.photos/seed/case${c.id}/1200/800`;
                 }}

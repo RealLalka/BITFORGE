@@ -7,7 +7,7 @@ export default function StandardCase({ caseData, assetFolder, caseId }: { caseDa
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-screen bg-[#050505] relative overflow-hidden selection:bg-lava selection:text-white">
+    <div className="min-h-screen bg-dark relative overflow-hidden selection:bg-lava selection:text-white">
       {/* Glow Effects */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
         <div className="absolute top-[20%] left-[-10%] w-[500px] h-[500px] bg-lava mix-blend-screen filter blur-[150px] opacity-10"></div>
@@ -16,30 +16,23 @@ export default function StandardCase({ caseData, assetFolder, caseId }: { caseDa
 
       <div className="pt-32 pb-24 relative z-10">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <Link to="/portfolio" className="inline-flex items-center gap-2 text-beige/50 hover:text-lava font-mono text-xs uppercase tracking-widest mb-12 transition-colors">
-            <ArrowLeft size={16} /> {t('case.back')}
-          </Link>
+          <div className="flex flex-row items-center justify-between gap-6 mb-12">
+            <Link to="/portfolio" className="inline-flex items-center gap-3 text-beige font-mono text-xs md:text-sm uppercase tracking-widest hover:text-lava transition-colors px-6 py-3 border border-beige/20 hover:border-lava/50 bg-dark/50 backdrop-blur-sm">
+              <ArrowLeft size={16} /> <span className="hidden sm:inline">{t('case.back')}</span><span className="sm:hidden">{t('ui.back')}</span>
+            </Link>
+            <div className="flex flex-wrap gap-3 justify-end">
+              <span className="text-lava text-[9px] font-mono uppercase tracking-widest border border-lava/30 px-2 py-1 backdrop-blur-sm bg-lava/5">{caseData.tag1}</span>
+              <span className="text-lava text-[9px] font-mono uppercase tracking-widest border border-lava/30 px-2 py-1 backdrop-blur-sm bg-lava/5">{caseData.tag2}</span>
+            </div>
+          </div>
 
           <motion.div 
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             className="mb-20"
           >
-            <div className="flex flex-wrap gap-3 mb-8">
-              <span className="text-lava text-[10px] font-mono uppercase tracking-widest border border-lava/30 px-3 py-1.5 backdrop-blur-sm bg-lava/5">{caseData.tag1}</span>
-              <span className="text-lava text-[10px] font-mono uppercase tracking-widest border border-lava/30 px-3 py-1.5 backdrop-blur-sm bg-lava/5">{caseData.tag2}</span>
-            </div>
-            
-            <div className="flex flex-col md:flex-row md:items-end gap-8 mb-12">
-              <img 
-                src={`/assets/cases/${assetFolder}/logo.svg`} 
-                alt="Logo" 
-                className="h-16 md:h-24 w-auto object-contain drop-shadow-[0_0_30px_rgba(255,77,0,0.3)]"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = 'none';
-                }}
-              />
-              <h1 className="text-[clamp(2.5rem,6vw,80px)] font-black uppercase text-white tracking-tighter leading-[1] drop-shadow-lg">
+            <div className="mb-8 md:mb-12">
+              <h1 className="text-[clamp(2rem,6vw,80px)] font-black uppercase text-white tracking-tighter leading-[1] drop-shadow-lg break-words max-w-full">
                 {caseData.title}
               </h1>
             </div>
@@ -61,14 +54,14 @@ export default function StandardCase({ caseData, assetFolder, caseId }: { caseDa
               <img 
                 src={`/assets/cases/${assetFolder}/hero-screenshot.png`}
                 alt="Wave Messenger"
-                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105"
+                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = `https://picsum.photos/seed/case${caseId}/1920/1080`;
                 }}
               />
             ) : (
               <video 
-                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700 group-hover:scale-105"
+                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-700"
                 autoPlay 
                 loop 
                 muted 
@@ -79,7 +72,7 @@ export default function StandardCase({ caseData, assetFolder, caseId }: { caseDa
                   target.style.display = 'none';
                   const img = document.createElement('img');
                   img.src = `/assets/cases/${assetFolder}/hero-screenshot.png`;
-                  img.className = "absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700 group-hover:scale-105";
+                  img.className = "absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-700";
                   target.parentNode?.insertBefore(img, target);
                 }}
               />
