@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useState, useEffect } from 'react';
 import { ChevronDown, Menu, X, ArrowRight, ChevronLeft } from 'lucide-react';
 import { useModal } from '../context/ModalContext';
+import { getServiceIcon } from '../utils/serviceIcons';
 
 type ServiceItem = { id: string; title: string; description: string; steps: { title: string; desc: string }[] };
 type ServiceCategory = { id: string; title: string; desc: string; items: ServiceItem[] };
@@ -69,30 +70,43 @@ export default function Header() {
                       <button 
                         key={category.id}
                         onMouseEnter={() => setActiveCategory(category.id)}
-                        className={`text-left p-4 transition-all duration-300 border-l-2 ${activeCategory === category.id ? 'border-lava bg-lava/5 text-lava' : 'border-transparent text-beige/60 hover:text-beige hover:bg-beige/[0.02]'}`}
+                        className={`text-left p-5 transition-all duration-500 border-l-2 relative overflow-hidden group/cat ${activeCategory === category.id ? 'border-lava bg-gradient-to-r from-lava/10 to-transparent text-lava' : 'border-transparent text-beige/60 hover:text-beige hover:bg-beige/[0.02]'}`}
                       >
-                        <h4 className="font-black text-sm uppercase tracking-widest mb-1">{category.title}</h4>
-                        <p className="font-mono text-[10px] opacity-70 line-clamp-2">{category.desc}</p>
+                        <h4 className={`font-black text-sm uppercase tracking-widest mb-2 transition-colors duration-300 ${activeCategory === category.id ? 'text-lava' : 'text-beige'}`}>{category.title}</h4>
+                        <p className="font-mono text-[10px] opacity-70 line-clamp-2 leading-relaxed">{category.desc}</p>
                       </button>
                     ))}
                   </div>
                   
                   {/* Services Column */}
-                  <div className="w-2/3 grid grid-cols-2 lg:grid-cols-3 gap-3 content-start max-h-[60vh] overflow-y-auto pr-2 custom-scrollbar">
-                    {servicesData.find(c => c.id === activeCategory)?.items.map((item) => (
-                      <Link 
-                        key={item.id} 
-                        to={`/services/${item.id}`} 
-                        onClick={() => setServicesOpen(false)}
-                        className="group/card block p-4 border border-beige/5 hover:border-lava/50 bg-beige/[0.02] hover:bg-lava/5 transition-all duration-300 flex flex-col h-full"
-                      >
-                        <h4 className="font-black text-beige text-[11px] uppercase tracking-widest mb-2 group-hover/card:text-lava transition-colors leading-tight">{item.title}</h4>
-                        <p className="font-mono text-[9px] text-beige/50 leading-relaxed mb-3 line-clamp-2 flex-grow">{item.description}</p>
-                        <div className="flex items-center gap-1.5 font-mono text-[9px] text-lava uppercase tracking-widest opacity-0 group-hover/card:opacity-100 transition-opacity mt-auto">
-                          {t('ui.more')} <ArrowRight size={10} />
-                        </div>
-                      </Link>
-                    ))}
+                  <div className="w-2/3 grid grid-cols-2 lg:grid-cols-3 gap-4 content-start max-h-[70vh] overflow-y-auto pr-2 custom-scrollbar">
+                    {servicesData.find(c => c.id === activeCategory)?.items.map((item) => {
+                      const Icon = getServiceIcon(item.id);
+                      return (
+                        <Link 
+                          key={item.id} 
+                          to={`/services/${item.id}`} 
+                          onClick={() => setServicesOpen(false)}
+                          className="group/card relative block p-4 border border-beige/10 hover:border-lava/50 bg-dark hover:bg-gradient-to-br hover:from-lava/10 hover:to-transparent transition-all duration-500 flex flex-col h-full overflow-hidden"
+                        >
+                          {/* Hover Glow */}
+                          <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-lava to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-500"></div>
+                          
+                          <div className="flex items-center gap-3 mb-3">
+                            <div className="w-10 h-10 rounded-none border border-beige/10 group-hover/card:border-lava/30 bg-beige/[0.02] group-hover/card:bg-lava/10 flex items-center justify-center shrink-0 transition-colors duration-500">
+                              <Icon size={20} strokeWidth={1.5} className="text-beige/70 group-hover/card:text-lava transition-colors duration-500" />
+                            </div>
+                            <h4 className="font-black text-beige text-[11px] uppercase tracking-widest group-hover/card:text-lava transition-colors leading-tight">{item.title}</h4>
+                          </div>
+                          
+                          <p className="font-mono text-[10px] text-beige/50 leading-relaxed mb-4 flex-grow">{item.description}</p>
+                          
+                          <div className="flex items-center gap-2 font-mono text-[10px] text-lava uppercase tracking-widest opacity-0 group-hover/card:opacity-100 transition-all duration-500 translate-y-2 group-hover/card:translate-y-0 mt-auto">
+                            {t('ui.more')} <ArrowRight size={12} />
+                          </div>
+                        </Link>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -137,15 +151,14 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Mobile Floating UI - Logo (Top Left) */}
-      <div className="md:hidden fixed top-4 left-4 z-[60] pointer-events-auto">
-        <Link to="/">
-          <img src="/assets/logo/logo.svg" alt="Bitforge" className="h-10 w-auto drop-shadow-lg" />
-        </Link>
-      </div>
+      {/* Mobile Header Background */}
+      <div className="md:hidden fixed top-0 left-0 right-0 h-20 bg-dark/80 backdrop-blur-md z-[55] pointer-events-none"></div>
 
-      {/* Mobile Floating UI - Single Burger Button (Top Right) */}
-      <div className="md:hidden fixed top-4 right-4 z-[60] flex items-center justify-end pointer-events-none">
+      {/* Mobile Floating UI - Logo and Burger Button */}
+      <div className="md:hidden fixed top-0 left-0 right-0 h-20 z-[60] flex items-center justify-between px-6 pointer-events-none">
+        <Link to="/" onClick={() => setMobileMenuOpen(false)} className="pointer-events-auto">
+          <img src="/assets/logo/logo.svg" alt="Bitforge" className="h-8 w-auto" />
+        </Link>
         <button 
           onClick={() => {
             setMobileMenuOpen(!mobileMenuOpen);
@@ -215,12 +228,12 @@ export default function Header() {
               <button 
                 key={category.id} 
                 onClick={() => { setSelectedCategory(category.id); setMobileMenuLevel('services'); }}
-                className="text-left p-5 border border-beige/10 bg-beige/[0.02] active:bg-lava/10 transition-colors flex flex-col"
+                className="text-left p-8 border border-beige/10 bg-beige/[0.02] active:bg-lava/10 transition-colors flex flex-col min-h-[140px] justify-center"
               >
-                <h4 className="font-black text-beige text-sm uppercase tracking-widest mb-2 flex justify-between items-center w-full">
-                  {category.title} <ArrowRight size={16} className="text-lava" />
+                <h4 className="font-black text-beige text-base uppercase tracking-widest mb-4 flex justify-between items-center w-full">
+                  {category.title} <ArrowRight size={20} className="text-lava" />
                 </h4>
-                <p className="font-mono text-[10px] text-beige/50 leading-relaxed">{category.desc}</p>
+                <p className="font-mono text-xs text-beige/50 leading-relaxed">{category.desc}</p>
               </button>
             ))}
           </div>
@@ -239,21 +252,30 @@ export default function Header() {
             {servicesData.find(c => c.id === selectedCategory)?.title}
           </h3>
           
-          <div className="flex flex-col gap-4 overflow-y-auto pb-24 hide-scrollbar">
-            {servicesData.find(c => c.id === selectedCategory)?.items.map((item) => (
-              <Link 
-                key={item.id} 
-                to={`/services/${item.id}`} 
-                onClick={() => setMobileMenuOpen(false)}
-                className="p-5 border border-beige/10 bg-beige/[0.02] active:bg-lava/10 transition-colors"
-              >
-                <h4 className="font-black text-beige text-sm uppercase tracking-widest mb-2">{item.title}</h4>
-                <p className="font-mono text-[10px] text-beige/50 leading-relaxed mb-4 line-clamp-2">{item.description}</p>
-                <div className="flex items-center gap-2 font-mono text-[10px] text-lava uppercase tracking-widest">
-                  {t('ui.more')} <ArrowRight size={12} />
-                </div>
-              </Link>
-            ))}
+          <div className="flex flex-col gap-5 overflow-y-auto pb-24 hide-scrollbar">
+            {servicesData.find(c => c.id === selectedCategory)?.items.map((item) => {
+              const Icon = getServiceIcon(item.id);
+              return (
+                <Link 
+                  key={item.id} 
+                  to={`/services/${item.id}`} 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="group/card relative block p-6 border border-beige/10 active:border-lava/50 bg-beige/[0.02] active:bg-gradient-to-br active:from-lava/10 active:to-transparent transition-all duration-500 overflow-hidden min-h-[180px]"
+                >
+                  {/* Active Glow */}
+                  <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-lava to-transparent opacity-0 group-active/card:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <div className="flex gap-4 items-center">
+                    <div className="w-14 h-14 rounded-none border border-beige/10 group-active/card:border-lava/30 bg-dark group-active/card:bg-lava/10 flex items-center justify-center shrink-0 transition-colors duration-500">
+                      <Icon size={28} strokeWidth={1.5} className="text-beige/70 group-active/card:text-lava transition-colors duration-500" />
+                    </div>
+                    <h4 className="font-black text-beige text-base uppercase tracking-widest group-active/card:text-lava transition-colors leading-tight flex-grow">{item.title}</h4>
+                  </div>
+                  
+                  <p className="font-mono text-xs text-beige/50 leading-relaxed mt-4 mb-4">{item.description}</p>
+                </Link>
+              );
+            })}
           </div>
         </div>
 

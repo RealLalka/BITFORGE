@@ -4,6 +4,7 @@ import { ArrowLeft } from 'lucide-react';
 import { useEffect } from 'react';
 import { useModal } from '../context/ModalContext';
 import { useTranslation } from 'react-i18next';
+import { getServiceIcon } from '../utils/serviceIcons';
 
 type ServiceItem = { id: string; title: string; description: string; steps: { title: string; desc: string }[] };
 type ServiceCategory = { id: string; title: string; desc: string; items: ServiceItem[] };
@@ -44,9 +45,19 @@ export default function ServicePage() {
     );
   }
 
+  const BackgroundIcon = getServiceIcon(service.id);
+
   return (
-    <div className="min-h-screen bg-dark pt-32 pb-20">
-      <div className="max-w-4xl mx-auto px-6 md:px-12">
+    <div className="min-h-screen bg-dark pt-32 pb-20 relative overflow-hidden">
+      {/* Radial Gradient Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,77,0,0.06),transparent_70%)] pointer-events-none z-0"></div>
+
+      {/* Huge Background Icon */}
+      <div className="absolute top-20 right-[-10%] md:right-[5%] opacity-[0.03] pointer-events-none z-0">
+        <BackgroundIcon className="w-[120vw] h-[120vw] md:w-[800px] md:h-[800px] text-lava" strokeWidth={0.5} />
+      </div>
+
+      <div className="max-w-4xl mx-auto px-6 md:px-12 relative z-10">
         <Link to="/" className="inline-flex items-center gap-3 text-beige font-mono text-xs md:text-sm uppercase tracking-widest hover:text-lava transition-colors px-6 py-3 border border-beige/20 hover:border-lava/50 bg-dark/50 backdrop-blur-sm mb-12">
           <ArrowLeft size={16} /> {t('ui.back')}
         </Link>

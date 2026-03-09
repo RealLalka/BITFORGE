@@ -44,10 +44,10 @@ export default function Home({ loading, onLoadingComplete }: { loading?: boolean
         </section>
 
         <Metrics />
-        {/* <Clients /> */}
+        <Clients />
         <Expertise />
         <Pipeline />
-        {/* <Team /> */}
+        <Team />
       </motion.div>
     </>
   );

@@ -25,10 +25,12 @@ export default function Hero({ loading, onLoadingComplete }: { loading?: boolean
       
       if (t >= 1) {
         clearInterval(interval);
-        setPhase('complete');
         setTimeout(() => {
-          if (onLoadingComplete) onLoadingComplete();
-        }, 500);
+          setPhase('complete');
+          setTimeout(() => {
+            if (onLoadingComplete) onLoadingComplete();
+          }, 500);
+        }, 150);
       }
     }, 16);
 
@@ -138,7 +140,7 @@ export default function Hero({ loading, onLoadingComplete }: { loading?: boolean
                 <div className="mt-12 flex flex-col items-center w-64">
                   <div className="flex justify-between w-full mb-3 font-mono text-[10px] uppercase tracking-[0.3em] font-bold text-beige/50">
                     <span>Loading</span>
-                    <span className="text-lava">{Math.floor(progress)}%</span>
+                    <span className="text-lava">{Math.round(progress)}%</span>
                   </div>
                   <div className="w-full h-[2px] bg-beige/10 relative overflow-hidden">
                     <motion.div 
