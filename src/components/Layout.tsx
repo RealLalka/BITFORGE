@@ -4,6 +4,7 @@ import Footer from './Footer';
 import { ModalProvider } from '../context/ModalContext';
 import ContactModal from './ContactModal';
 import FaqModal from './FaqModal';
+import CookieConsent from './CookieConsent';
 import { useScrollLock } from '../context/ScrollLockContext';
 import { motion } from 'motion/react';
 
@@ -34,6 +35,7 @@ export default function Layout() {
         </motion.div>
         <ContactModal />
         <FaqModal />
+        <CookieConsent />
       </div>
     </ModalProvider>
   );

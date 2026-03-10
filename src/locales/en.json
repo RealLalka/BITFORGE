@@ -73,6 +73,52 @@
       "solution": "Designed a multi-platform application using End-to-End Encryption protocols and an adaptive interface.",
       "result": "Group audio and video calls, channel system, media file storage, and custom bot integration.",
       "overview": "Tech Esthetics & UX Analysis\nThe visual strategy is based on Negative Space principles, allowing the user to focus on dialogues while minimizing distracting elements.\n\nUI components: Active implementation of Glassmorphism for side navigation panels, creating a depth and content layering effect.\n\nVisual accents: Use of Subtle Gradient in message bubbles to highlight priority chats and read statuses.\n\nUsability and Accessibility (a11y):\nFloating UI: Buttons for creating new chats and media attachments are implemented as floating elements, accessible in one click.\nIntuitiveness: Gesture navigation (swipes) is integrated into UX patterns for quick management of archiving and replies.\nGraphic dominants: Minimalist icons with thin lines (Linear Style) ensure interface cleanliness during high-density information flows."
+    },
+    "youngDesign": {
+      "subtitle": "Design System Deconstruction: Dark Mode SaaS, Glassmorphism, and Brutalist Typography.",
+      "tech": {
+        "title": "Technologies",
+        "core": "Core:",
+        "coreDesc": "Monolithic WordPress CMS with a component-based approach.",
+        "framework": "Framework:",
+        "frameworkDesc": "BeTheme (Muffin Builder). Modular grid for Responsive Web Design.",
+        "integrations": "Integrations:",
+        "integrationsDesc": "Gravity Forms, Ultimate Member, LayerSlider, WooCommerce."
+      },
+      "visual": {
+        "title": "Visual Language",
+        "glassmorphism": "Glassmorphism:",
+        "glassmorphismDesc": "with translucent backgrounds to create visual depth (Z-axis elevation).",
+        "darkLinear": "Dark Linear Style:",
+        "darkLinearDesc": "Thin borders outline elements without adding visual weight.",
+        "floatingUI": "Floating UI:",
+        "floatingUIDesc": "11px, 20px, 30px border radii and shadows create a floating elements effect.",
+        "negativeSpace": "Negative Space:",
+        "negativeSpaceDesc": "Wide paddings improve cognitive perception."
+      },
+      "colors": {
+        "title": "Color Tokens"
+      },
+      "typography": {
+        "title": "Typography",
+        "display": "Display Font",
+        "displayDesc": "Display font with pronounced inktraps. Gives a brutal and technological look.",
+        "body": "Body Text",
+        "bodyDesc": "Geometric sans-serif. Ensures high legibility in small sizes on a dark background."
+      },
+      "uiux": {
+        "title": "UI/UX Patterns",
+        "forms": "Input Forms",
+        "formsDesc": "Integrated into Glassmorphism. Translucent background with a white border. Active state is highlighted for a11y.",
+        "micro": "Microinteractions",
+        "microDesc": "Smooth Y-axis shift and increased glow on hover (box-shadow) provide clear tactile feedback (affordance).",
+        "nav": "Navigation",
+        "navDesc": "Sticky Header on scroll and an Off-canvas sidebar to save space on mobile devices."
+      },
+      "details": {
+        "title": "Glassmorphism in Detail",
+        "desc": "The combination of background blur, translucent fills, and thin light borders creates a multi-layered interface effect."
+      }
     }
   },
   "faq": {
@@ -828,5 +874,19 @@
         }
       ]
     }
-  ]
+  ],
+  "cookie": {
+    "text": "We use cookies to improve site performance and analyze traffic.",
+    "accept": "ACCEPT"
+  },
+  "success": {
+    "title": "REQUEST SENT",
+    "text": "Thank you! Our analyst will contact you shortly.",
+    "close": "CLOSE"
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email",
+    "phone": "Please enter a valid phone number"
+  }
 }

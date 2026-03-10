@@ -19,14 +19,14 @@ export default function Footer() {
       
       <div className={`max-w-[1600px] mx-auto relative z-20 flex flex-col lg:flex-row justify-between items-start gap-12 md:gap-20 w-full ${isCompact ? 'mb-10 md:mb-16' : 'mb-16 md:mb-32'}`}>
         {!isServicePage && (
-          <div className="max-w-4xl text-left w-full lg:w-auto">
+          <div className="max-w-4xl text-center md:text-left w-full lg:w-auto flex flex-col items-center md:items-start">
             <h2 className={`font-black uppercase leading-[0.85] tracking-tighter cursor-default ${isCompact ? 'text-[clamp(2.5rem,8vw,100px)] mb-6 md:mb-8' : 'text-[clamp(3.5rem,12vw,150px)] mb-8 md:mb-12'}`}>
               <span className="text-beige block">{t('footer.title1')}</span>
               <span className="text-lava block">{t('footer.title2')}</span>
             </h2>
             <button 
               onClick={() => openModal('contact')}
-              className="linear-btn bg-transparent hover:bg-lava !border-beige/30 hover:!border-lava text-beige hover:text-dark w-full sm:w-auto text-center justify-center"
+              className="linear-btn bg-transparent hover:bg-lava !border-beige/30 hover:!border-lava text-beige hover:text-dark w-[80%] max-w-[280px] sm:w-auto sm:max-w-none text-center justify-center !text-xs md:!text-sm !py-3 md:!py-5 !px-6 md:!px-10"
             >
               {t('footer.btn')}
             </button>
@@ -64,9 +64,9 @@ export default function Footer() {
               </button>
             </div>
           </div>
-          <div className={`flex flex-col ${isServicePage ? 'col-span-1 order-2 md:order-3 md:py-8' : ''}`}>
+          <div className={`flex flex-col ${isServicePage ? 'col-span-1 order-2 md:order-3 md:py-8' : 'items-end text-right md:items-start md:text-left'}`}>
             <p className="font-mono text-[9px] md:text-[10px] font-bold uppercase tracking-[0.3em] text-beige/30 mb-6 md:mb-8">{t('footer.social')}</p>
-            <div className="flex flex-col gap-4 md:gap-6">
+            <div className="flex flex-col gap-4 md:gap-6 items-end md:items-start">
               <a className="block font-mono font-bold text-[10px] sm:text-sm md:text-base text-beige hover:text-lava transition-colors uppercase tracking-widest" href="#">TELEGRAM</a>
               <a className="block font-mono font-bold text-[10px] sm:text-sm md:text-base text-beige hover:text-lava transition-colors uppercase tracking-widest" href="#">GITHUB</a>
               <a className="block font-mono font-bold text-[10px] sm:text-sm md:text-base text-beige hover:text-lava transition-colors uppercase tracking-widest" href="#">BEHANCE</a>

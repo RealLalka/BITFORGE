@@ -47,7 +47,7 @@ export default function Home({ loading, onLoadingComplete }: { loading?: boolean
         <Clients />
         <Expertise />
         <Pipeline />
-        <Team />
+        {/* <Team /> */}
       </motion.div>
     </>
   );

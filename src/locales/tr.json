@@ -73,6 +73,52 @@
       "solution": "Uçtan Uca Şifreleme (End-to-End Encryption) protokolleri ve uyarlanabilir bir arayüz kullanılarak çok platformlu bir uygulama tasarlandı.",
       "result": "Grup sesli ve görüntülü aramalar, kanal sistemi, medya dosyası depolama ve özel bot entegrasyonu.",
       "overview": "Teknik Estetik ve UX Analizi\nGörsel strateji, kullanıcının dikkat dağıtıcı unsurları en aza indirirken diyaloglara odaklanmasını sağlayan Negative Space ilkelerine dayanmaktadır.\n\nUI bileşenleri: Yan navigasyon panelleri için Glassmorphism'in aktif uygulaması, derinlik ve içerik katmanlama etkisi yaratır.\n\nGörsel vurgular: Öncelikli sohbetleri ve okundu durumlarını vurgulamak için mesaj balonlarında Subtle Gradient kullanımı.\n\nKullanılabilirlik ve Erişilebilirlik (a11y):\nFloating UI: Yeni sohbetler oluşturma ve medya ekleme düğmeleri, tek tıkla erişilebilen yüzen öğeler olarak uygulanmıştır.\nSezgisellik: Arşivleme ve yanıtların hızlı yönetimi için UX desenlerine jest navigasyonu (kaydırma) entegre edilmiştir.\nGrafik baskınlar: İnce çizgili minimalist simgeler (Linear Style), yüksek yoğunluklu bilgi akışları sırasında arayüz temizliğini sağlar."
+    },
+    "youngDesign": {
+      "subtitle": "Tasarım Sistemi Yapısökümü: Dark Mode SaaS, Glassmorphism ve Brutalist Tipografi.",
+      "tech": {
+        "title": "Teknolojiler",
+        "core": "Çekirdek:",
+        "coreDesc": "Bileşen tabanlı yaklaşıma sahip monolitik WordPress CMS.",
+        "framework": "Çerçeve:",
+        "frameworkDesc": "BeTheme (Muffin Builder). Duyarlı Web Tasarımı için modüler ızgara.",
+        "integrations": "Entegrasyonlar:",
+        "integrationsDesc": "Gravity Forms, Ultimate Member, LayerSlider, WooCommerce."
+      },
+      "visual": {
+        "title": "Görsel Dil",
+        "glassmorphism": "Glassmorphism:",
+        "glassmorphismDesc": "görsel derinlik (Z ekseni yüksekliği) oluşturmak için yarı saydam arka planlarla.",
+        "darkLinear": "Dark Linear Style:",
+        "darkLinearDesc": "İnce kenarlıklar, görsel ağırlık eklemeden öğeleri ana hatlarıyla belirtir.",
+        "floatingUI": "Floating UI:",
+        "floatingUIDesc": "11px, 20px, 30px kenar yarıçapları ve gölgeler, yüzen öğeler efekti yaratır.",
+        "negativeSpace": "Negative Space:",
+        "negativeSpaceDesc": "Geniş dolgular bilişsel algıyı iyileştirir."
+      },
+      "colors": {
+        "title": "Renk Jetonları"
+      },
+      "typography": {
+        "title": "Tipografi",
+        "display": "Ekran Yazı Tipi",
+        "displayDesc": "Belirgin mürekkep tuzaklarına sahip ekran yazı tipi. Acımasız ve teknolojik bir görünüm verir.",
+        "body": "Gövde Metni",
+        "bodyDesc": "Geometrik sans-serif. Koyu bir arka planda küçük boyutlarda yüksek okunabilirlik sağlar."
+      },
+      "uiux": {
+        "title": "UI/UX Desenleri",
+        "forms": "Giriş Formları",
+        "formsDesc": "Glassmorphism'e entegre edilmiştir. Beyaz kenarlıklı yarı saydam arka plan. Aktif durum a11y için vurgulanır.",
+        "micro": "Mikro Etkileşimler",
+        "microDesc": "Pürüzsüz Y ekseni kayması ve üzerine gelindiğinde artan parlaklık (box-shadow), net dokunsal geri bildirim sağlar (affordance).",
+        "nav": "Navigasyon",
+        "navDesc": "Kaydırmada Sabit Başlık ve mobil cihazlarda yer kazanmak için Ekran Dışı kenar çubuğu."
+      },
+      "details": {
+        "title": "Ayrıntılı Olarak Glassmorphism",
+        "desc": "Arka plan bulanıklığı, yarı saydam dolgular ve ince açık kenarlıkların birleşimi, çok katmanlı bir arayüz efekti yaratır."
+      }
     }
   },
   "faq": {
@@ -828,5 +874,19 @@
         }
       ]
     }
-  ]
+  ],
+  "cookie": {
+    "text": "Site performansını artırmak ve trafiği analiz etmek için çerezleri kullanıyoruz.",
+    "accept": "KABUL ET"
+  },
+  "success": {
+    "title": "TALEP GÖNDERİLDİ",
+    "text": "Teşekkürler! Analistimiz kısa süre içinde sizinle iletişime geçecektir.",
+    "close": "KAPAT"
+  },
+  "validation": {
+    "required": "Bu alan zorunludur",
+    "email": "Lütfen geçerli bir e-posta girin",
+    "phone": "Lütfen geçerli bir telefon numarası girin"
+  }
 }

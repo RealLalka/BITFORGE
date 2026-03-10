@@ -1,12 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@700;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('/assets/cases/young-design/NeueMachina-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('/assets/cases/young-design/NeueMachina-Ultrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-dark: #0f0f0f;
   --color-beige: #edcfba;
   --color-lava: #ff4d00;
   --font-sans: "Golos Text", sans-serif;
   --font-mono: "IBM Plex Mono", monospace;
+  --font-neue: "Neue Machina", sans-serif;
   --tracking-tighter: 0.01em;
   --tracking-tight: 0.02em;
   --tracking-normal: 0.035em;

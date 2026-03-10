@@ -4,6 +4,8 @@ import React from 'react';
 interface IconProps extends React.SVGProps<SVGSVGElement> {
   size?: number | string;
   strokeWidth?: number | string;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 // Base Icon wrapper with strict geometric styling (miter joins for tech feel)

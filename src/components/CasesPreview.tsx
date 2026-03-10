@@ -76,7 +76,7 @@ export default function CasesPreview() {
             key={c.id}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "50px" }}
             transition={{ duration: 0.8 }}
             className="grid grid-cols-1 lg:grid-cols-12 gap-0 border-b border-beige/10 min-h-0 lg:min-h-[80vh] relative group"
           >
